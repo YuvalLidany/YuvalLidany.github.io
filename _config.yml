@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : ""
+title                    : "Yuval Lidany"
 title_separator          : "-"
 name                     : &name "Yuval Lidany"
 description              : &description "personal description"
