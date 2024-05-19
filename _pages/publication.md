@@ -10,9 +10,12 @@ Compatibility between standalone technology products is an inconspicuous attribu
 
 <br> <br>
 
+<p> <strong>Closed ecosystems and firms' investments</strong>.</p>
+ 
+<br> <br>
+
 <p> <strong>The Effect of Closed Ecosystems on Consumers' Consideration Sets</strong>.</p>
  
-
 
 <!--
 {% if site.author.googlescholar %}
