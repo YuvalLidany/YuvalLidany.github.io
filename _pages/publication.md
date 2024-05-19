@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-* (In)Compatibility of technology products: smartphones and laptops in the U.S. market
+* (In)Compatibility of technology products: smartphones and laptops in the U.S. market <br>
 jndskjndskdjn
 
 <!--
