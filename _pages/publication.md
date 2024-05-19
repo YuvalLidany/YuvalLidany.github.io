@@ -10,7 +10,7 @@ Compatibility between standalone technology products is an inconspicuous attribu
 
 <br> <br>
 
-<p> <strong>The Effect of Closed Ecosystems on Consumers' Consideration Sets.</strong>.</p>
+<p> <strong>The Effect of Closed Ecosystems on Consumers' Consideration Sets</strong>.</p>
  
 
 
