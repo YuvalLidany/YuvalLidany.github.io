@@ -8,6 +8,7 @@ redirect_from:
 ---
 I am an economist and a PhD candidate at Boston college. I am on the 2024-25 job market. 
 <br>
+<br>
 My main fields of research are empirical industrial organization, antitrust economics, and experimental economics.
 
 <!-- 
