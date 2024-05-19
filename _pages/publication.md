@@ -10,7 +10,7 @@ Compatibility between standalone technology products is an inconspicuous attribu
 
 <br> <br>
 
-<p> <strong>Closed ecosystems and firms' investments</strong>.</p>
+<p> <strong>Closed Ecosystems and Firms' Investments</strong>.</p>
  
 <br> <br>
 
