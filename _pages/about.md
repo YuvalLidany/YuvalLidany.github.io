@@ -9,7 +9,7 @@ redirect_from:
 I am an economist and a PhD candidate at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" style="color: #5dade2;text-decoration: none;">Boston College</a>. I am on the 2024-25 job market. 
 <br>
 <br>
-My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct IO structural models and experimental setups to analyze interdependent markets.
+My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct and utilize IO structural models and experimental setups to analyze interdependent markets.
 
 <br>
 Advisors: <a href="https://charliemurry.github.io/">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research">Lucas Coffman</a>, <a href="https://sites.google.com/bc.edu/michael-grubb"> Michael D. Grubb</a>
