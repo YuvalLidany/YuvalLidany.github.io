@@ -12,7 +12,7 @@ I am an economist and a PhD candidate at <a href="https://www.bc.edu/bc-web/scho
 My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct and utilize IO structural models and experimental setups to analyze interdependent markets.
 
 <br>
-Advisors: <a href="https://charliemurry.github.io/">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research">Lucas Coffman</a>, <a href="https://sites.google.com/bc.edu/michael-grubb"> Michael D. Grubb</a>
+Advisors: <a href="https://charliemurry.github.io/" target="_blank" rel="noopener noreferrer">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research" target="_blank" rel="noopener noreferrer">Lucas Coffman</a>, <a href="https://sites.google.com/bc.edu/michael-grubb" target="_blank" rel="noopener noreferrer"> Michael D. Grubb</a>
 
 
 
