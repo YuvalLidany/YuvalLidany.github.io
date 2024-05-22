@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an economist and a PhD candidate at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html"> Boston college</a>. I am on the 2024-25 job market. 
+I am an economist and a PhD candidate at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" style="color: red;">Boston College</a>. I am on the 2024-25 job market. 
 <br>
 <br>
 My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct IO structural models and experimental setups to analyze interdependent markets.
