@@ -20,25 +20,37 @@
 {% endif %}
 
 <style>
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Ensure this matches your page's background color */
+    color: inherit;
+    height: 100%; /* Ensure full height */
+}
+
 .footer-container {
     text-align: center;
-    margin-top: 40px; /* Adjust the margin as needed */
-    color: inherit; /* Inherit the color from the rest of the page */
-    background-color: inherit; /* Ensure the background color matches the rest of the page */
-    width: 100%; /* Ensure the footer spans the entire width */
+    margin: 0; /* Remove margin */
     padding: 10px 0; /* Adjust padding to reduce space */
+    color: inherit; /* Inherit the color from the rest of the page */
+    background-color: #ffffff; /* Ensure the background color matches the rest of the page */
+    width: 100%; /* Ensure the footer spans the entire width */
+    position: absolute;
+    bottom: 0;
 }
+
 .footer-envelope {
     display: block;
     font-size: 24px;
     margin-bottom: 5px; /* Adjust the margin as needed */
     color: inherit; /* Inherit the color from the rest of the page */
 }
+
 .page__footer-copyright {
     margin: 0; /* Remove default margins */
     padding: 5px 0; /* Reduce padding */
     color: inherit; /* Inherit the color from the rest of the page */
-    background-color: inherit; /* Ensure the background color matches the rest of the page */
+    background-color: #ffffff; /* Ensure the background color matches the rest of the page */
 }
 </style>
 
@@ -48,6 +60,3 @@
         &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
     </div>
 </div>
-
-
- <!--  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
