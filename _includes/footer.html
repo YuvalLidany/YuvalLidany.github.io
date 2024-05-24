@@ -1,7 +1,5 @@
 {% include base_path %}
 
-{% include base_path %}
-
 {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
 <div class="page__footer-follow">
   <ul class="social-icons">
@@ -24,9 +22,9 @@
 <style>
 .footer-container {
     text-align: center;
-    margin-top: 50px; /* Adjust the margin as needed */
+    margin-top: 40px; /* Adjust the margin as needed */
     color: inherit; /* Inherit the color from the rest of the page */
-    background-color: inherit; /* Ensure the background color matches the rest of the page */
+    background-color: #ffffff; /* Ensure the background color matches the rest of the page */
     width: 100%; /* Ensure the footer spans the entire width */
     padding: 10px 0; /* Adjust padding to reduce space */
 }
@@ -40,7 +38,7 @@
     margin: 0; /* Remove default margins */
     padding: 5px 0; /* Reduce padding */
     color: inherit; /* Inherit the color from the rest of the page */
-    background-color: inherit; /* Ensure the background color matches the rest of the page */
+    background-color: #ffffff; /* Ensure the background color matches the rest of the page */
 }
 </style>
 
@@ -50,4 +48,5 @@
         &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
     </div>
 </div>
+
  <!--  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
