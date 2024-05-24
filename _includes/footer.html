@@ -27,15 +27,18 @@ body {
 }
 .footer-container {
     text-align: center;
-    margin-top: 24px; /* Adjust the margin as needed */
+    margin-top: 20px; /* Adjust the margin as needed */
     margin-bottom: 0; /* Reduce or set the bottom margin to zero */
     padding-bottom: 0; /* Reduce or set the bottom padding to zero */
     background-color: #ffffff; /* Ensure the footer background is also white */
+    width: 100%; /* Ensure the footer spans the entire width of the page */
+    padding-top: 20px; /* Add padding to the top for spacing */
+    box-sizing: border-box; /* Ensure padding does not affect width */
 }
 .footer-envelope {
     display: block;
     font-size: 24px;
-    margin-bottom: 0px; /* Adjust the margin as needed */
+    margin-bottom: 10px; /* Adjust the margin as needed */
 }
 .page__footer-copyright {
     font-size: 12px; /* Adjust the font size as needed */
@@ -50,6 +53,7 @@ body {
         &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
     </div>
 </div>
+
 
 <!--
 <div   class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. <a href="mailto:Lidany@bc.edu" style="text-decoration: none; font-size: 24px;">&#9993;</a>
