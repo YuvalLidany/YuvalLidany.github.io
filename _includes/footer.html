@@ -27,12 +27,10 @@ body {
 }
 .footer-container {
     text-align: center;
-    margin-top: 20px; /* Adjust the margin as needed */
-    margin-bottom: 0; /* Reduce or set the bottom margin to zero */
-    padding-bottom: 0; /* Reduce or set the bottom padding to zero */
-    background-color: #ffffff; /* Ensure the footer background is also white */
+    margin: 0; /* Remove any margins */
+    padding: 20px 0; /* Adjust the padding as needed */
+    background-color: #ffffff; /* Ensure the footer background is white */
     width: 100%; /* Ensure the footer spans the entire width of the page */
-    padding-top: 20px; /* Add padding to the top for spacing */
     box-sizing: border-box; /* Ensure padding does not affect width */
 }
 .footer-envelope {
@@ -42,8 +40,8 @@ body {
 }
 .page__footer-copyright {
     font-size: 12px; /* Adjust the font size as needed */
-    margin-bottom: 0; /* Reduce or set the bottom margin to zero */
-    padding-bottom: 0; /* Reduce or set the bottom padding to zero */
+    margin: 0; /* Remove any margins */
+    padding: 0; /* Remove any padding */
 }
 </style>
 
@@ -53,6 +51,7 @@ body {
         &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
     </div>
 </div>
+
 
 
 <!--
