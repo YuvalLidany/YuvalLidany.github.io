@@ -20,57 +20,34 @@
 {% endif %}
 
 <style>
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; /* Ensure this matches your page's background color */
-    color: inherit;
-    height: 100%;
-    width: 100%;
-}
-
-.page-wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.page-content {
-    flex: 1;
-}
-
 .footer-container {
     text-align: center;
-    margin: 0;
-    padding: 10px 0;
-    color: inherit;
-    background-color: #ffffff;
-    width: 100%;
+    margin-top: 40px; /* Adjust the margin as needed */
+    color: inherit; /* Inherit the color from the rest of the page */
+    background-color: inherit; /* Ensure the background color matches the rest of the page */
+    width: 100%; /* Ensure the footer spans the entire width */
+    padding: 10px 0; /* Adjust padding to reduce space */
 }
-
 .footer-envelope {
     display: block;
     font-size: 24px;
-    margin-bottom: 5px;
-    color: inherit;
+    margin-bottom: 5px; /* Adjust the margin as needed */
+    color: inherit; /* Inherit the color from the rest of the page */
 }
-
 .page__footer-copyright {
-    margin: 0;
-    padding: 5px 0;
-    color: inherit;
-    background-color: #ffffff;
+    margin: 0; /* Remove default margins */
+    padding: 5px 0; /* Reduce padding */
+    color: inherit; /* Inherit the color from the rest of the page */
+    background-color: inherit; /* Ensure the background color matches the rest of the page */
 }
 </style>
 
-<div class="page-wrapper">
-    <div class="page-content">
-        <!-- Your page content here -->
-    </div>
-    <div class="footer-container">
-        <a href="mailto:Lidany@bc.edu" class="footer-envelope">&#9993;</a>
-        <div class="page__footer-copyright">
-            &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
-        </div>
+<div class="footer-container">
+    <a href="mailto:Lidany@bc.edu" class="footer-envelope">&#9993;</a>
+    <div class="page__footer-copyright">
+        &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
     </div>
 </div>
+
+
+ <!--  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
