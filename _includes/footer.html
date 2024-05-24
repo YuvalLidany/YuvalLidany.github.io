@@ -20,28 +20,14 @@
 {% endif %}
 
 <style>
-body {
-    background-color: #ffffff; /* Set the background color of the entire page to white */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
 .footer-container {
     text-align: center;
-    margin: 0; /* Remove any margins */
-    padding: 20px 0; /* Adjust the padding as needed */
-    background-color: #ffffff; /* Ensure the footer background is white */
-    width: 100%; /* Ensure the footer spans the entire width of the page */
-    box-sizing: border-box; /* Ensure padding does not affect width */
+    margin-top: 20px; /* Adjust the margin as needed */
 }
 .footer-envelope {
     display: block;
     font-size: 24px;
     margin-bottom: 10px; /* Adjust the margin as needed */
-}
-.page__footer-copyright {
-    font-size: 12px; /* Adjust the font size as needed */
-    margin: 0; /* Remove any margins */
-    padding: 0; /* Remove any padding */
 }
 </style>
 
@@ -51,6 +37,7 @@ body {
         &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
     </div>
 </div>
+
 
 
 
