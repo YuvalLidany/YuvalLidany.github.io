@@ -5,8 +5,9 @@ permalink: /publications/
 author_profile: true
 ---
 <p> <strong>(In)Compatibility of Technology Products: Smartphones and Laptops in The U.S. Market</strong>.</p>
- 
-Compatibility between <em>standalone<em> technology products is an inconspicuous attribute that can anchor consumers to ecosystems. This paper studies the effect of compatibility between smartphones and laptops in the U.S. market. I first formulate a methodology enabling researchers to identify the causality of deep parameters. I then develop and estimate a structural model of smartphone (laptop) demand conditional on the owned laptop (smartphone) to quantify the effects of excluding incompatibility and allowing a cross-market merger. Variation in owned products identifies the compatibility coefficient.
+  
+This paper investigates the role of compatibility between <em>standalone<em> technology products, such as smartphones and laptops, in anchoring consumers to ecosystems in the U.S. market. I design a novel methodology to identify the causal impacts of deep parameters and develop a structural model of demand for smartphones and laptops, incorporating compatibility characteristics. This model quantifies the impact of opened ecosystems and cross-market mergers. Variation in consumer ownership identifies the compatibility coefficient. Counterfactual reveals that opened ecosystems increase market concentration when the hardware quality gap is considerable and vice versa, where consumer surplus increases due to lower prices and higher compatibility.
+
 
 <br> <br>
 
