@@ -12,7 +12,7 @@ I am an economist and a fourth-year PhD candidate at <a href="https://www.bc.edu
 My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct and utilize IO structural models and experimental designs to analyze interdependent markets.
 
 <br>
-Advisors: <a href="https://charliemurry.github.io/" target="_blank" rel="noopener noreferrer">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research" target="_blank" rel="noopener noreferrer">Lucas Coffman</a>, <a href="https://sites.google.com/bc.edu/michael-grubb" target="_blank" rel="noopener noreferrer"> Michael D. Grubb</a>, <a href="http://www.richard-sweeney.com/" target="_blank" rel="noopener noreferrer"> Richard L. Sweeney</a>
+Advisors: <a href="https://charliemurry.github.io/" target="_blank" rel="noopener noreferrer">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research" target="_blank" rel="noopener noreferrer">Lucas Coffman</a>, <a href="https://sites.google.com/bc.edu/michael-grubb" target="_blank" rel="noopener noreferrer"> Michael D. Grubb</a>.
 
 
 
