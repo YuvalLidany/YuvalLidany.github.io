@@ -6,10 +6,12 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an economist and a fourth-year PhD candidate at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a>. I am on the 2024-25 job market. 
+I am an economist and a fifth-year PhD candidate at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a>. I am on the 2024-25 job market. 
 <br> 
-<br>
-My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct and utilize IO structural models and experimental designs to analyze interdependent markets.
+<be>
+My research centers on empirical industrial organization, antitrust, and experimental economics. I specialize in combining experimental designs with IO structural models to explore the complexities of interdependent markets, offering rigorous insights into antitrust issues and market dynamics.
+
+<!--My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct and utilize IO structural models and experimental designs to analyze interdependent markets.-->
 
 <br>
 Advisors: <a href="https://charliemurry.github.io/" target="_blank" rel="noopener noreferrer">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research" target="_blank" rel="noopener noreferrer">Lucas Coffman</a>, <a href="https://sites.google.com/bc.edu/michael-grubb" target="_blank" rel="noopener noreferrer"> Michael D. Grubb</a>.
