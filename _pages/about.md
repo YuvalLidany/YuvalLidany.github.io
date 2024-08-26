@@ -14,6 +14,7 @@ My research centers on empirical industrial organization, antitrust, and experim
 <!--My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct and utilize IO structural models and experimental designs to analyze interdependent markets.-->
 
 <br>
+<br>
 Advisors: <a href="https://charliemurry.github.io/" target="_blank" rel="noopener noreferrer">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research" target="_blank" rel="noopener noreferrer">Lucas Coffman</a>, <a href="https://sites.google.com/bc.edu/michael-grubb" target="_blank" rel="noopener noreferrer"> Michael D. Grubb</a>.
 
 
