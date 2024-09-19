@@ -9,7 +9,7 @@ redirect_from:
 I am an economist and a fifth-year PhD candidate at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a>. I am on the 2024-25 job market. 
 <br> 
 <be>
-My research centers on empirical industrial organization, antitrust, and experimental economics. I specialize in combining experimental designs with IO structural models to explore the complexities of markets, offering rigorous insights into antitrust issues and market dynamics.
+My research focuses on empirical industrial organization (IO) and antitrust, integrating experimental economics. I specialize in combining IO structural models with experimental designs to delve into market complexities, providing rigorous insights into antitrust issues and market dynamics.
 
 <!--My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct and utilize IO structural models and experimental designs to analyze interdependent markets.-->
 
