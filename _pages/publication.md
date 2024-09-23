@@ -20,7 +20,12 @@ This paper examines the role of compatibility across <i>standalone</i> technolog
 <br> <br>
 
 <p> <strong>The Effect of Closed Ecosystems on Consumers' Consideration Sets</strong>.</p>
- 
+
+<br> <br>
+
+<span style="font-size: 20px; font-weight: bold;">Policy Papers</span>
+
+<p> <strong> Measuring Willingness to Pay for Compatibility Between Smartphones and Laptops</strong>, report to The Antitrust Division of the Department of Justice, August 2024.</p>
 
 <!--
 {% if site.author.googlescholar %}
