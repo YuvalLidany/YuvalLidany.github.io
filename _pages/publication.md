@@ -13,15 +13,15 @@ This paper examines the role of compatibility across <i>standalone</i> technolog
 
 
 
-<br> <br>
+<br> 
 
 <p> <strong>Closed Ecosystems and Firms' Investments</strong>.</p>
  
-<br> <br>
+<br> 
 
 <p> <strong>The Effect of Closed Ecosystems on Consumers' Consideration Sets</strong>.</p>
 
-<br> <br>
+<br> 
 
 <span style="font-size: 25px; font-weight: bold;">Policy Papers</span>
 
