@@ -6,14 +6,7 @@ author_profile: true
 ---
 <p> <strong>Cross-Product Compatibility, Lock-In, and Market Power: The Case of Smartphones and Laptops</strong>. (JMP)</p>
 
-This paper examines the role of compatibility across <i>standalone</i> technology products in anchoring consumers to brands. Through a novel experimental design, I identify the causal impact of compatibility, finding that when compatible with laptops, smartphone valuations increase by 9% of their retail price. I combine the experimental results with a smartphone demand model that incorporates compatibility with laptops to assess the welfare effects of regulations mandating cross-brand compatibility (&ldquo;open ecosystems&rdquo;) and cross-market mergers. The results show that in 2018-2019, closed ecosystems benefit Samsung by locking non-Apple laptop owners into lower-quality Samsung smartphones, while open ecosystems boost Apple’s smartphone revenue. However, in 2020-2023, closed ecosystems benefit Apple, as Samsung’s top smartphones are superior, prompting Apple laptop owners to opt for Samsung smartphones in open ecosystems. In both periods, consumer surplus rises due to lower prices and greater product variety. A counterfactual merger between Samsung and HP, respectively, Apple’s main competitors in the smartphone and laptop markets, which increases their cross-product compatibility, reduces smartphone market concentration but raises Samsung smartphone prices, disadvantaging consumers who value compatibility less.
-
-
- 
-
-
-  
-
+This paper examines the role of compatibility across <i>standalone</i> technology products in anchoring consumers to brands. Through a novel experimental design, I identify the causal impact of compatibility, showing that smartphone valuations increase by 9\% of their retail price with compatible laptops. I combine the experimental results with a smartphone demand model that incorporates compatibility with laptops to assess the welfare effects of regulations mandating cross-brand compatibility (&ldquo;open ecosystems&rdquo;) and cross-market mergers. I find that in 2018-2019, closed ecosystems benefit Samsung by locking non-Apple laptop owners into lower-quality Samsung smartphones, while open ecosystems boost Apple’s smartphone revenue. However, in 2020-2023, closed ecosystems benefit Apple, as Samsung’s top smartphones are superior, prompting Apple laptop owners to switch to Samsung smartphones in open ecosystems. In both periods, consumer surplus rises due to lower prices and greater product variety. A counterfactual merger between Samsung and HP, respectively, Apple’s main smartphone and laptop competitor, results in lower smartphone market concentration but raises Samsung smartphone prices, disadvantaging consumers who value compatibility less.
 
 
 <br> 
