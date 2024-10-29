@@ -1,3 +1,10 @@
+---
+layout: archive
+title: "Talks"
+permalink: /Talks/
+author_profile: true
+---
+
 <p><strong>“Cross-Product Compatibility, Lock-In, and Market Power: The Case of Smartphones and Laptops”</strong></p>
 
 <div style="display: flex; justify-content: space-between; width: 100%;">
