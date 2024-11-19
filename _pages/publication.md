@@ -35,9 +35,11 @@ This paper examines the role of compatibility across <i>standalone</i> technolog
 
 <span style="font-size: 25px; font-weight: bold;">Policy Papers</span>
 
-<p> <strong> Measuring Willingness to Pay for Compatibility Between Smartphones and Laptops</strong>, report to the <i>Antitrust Division of the Department of Justice</i>, August 2024.</p>
+<p> <strong> Measuring Willingness to Pay for Compatibility Between Smartphones and Laptops</strong>, August 2024.</p>
 
 <!--
+report to the <i>Antitrust Division of the Department of Justice</i>,
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
