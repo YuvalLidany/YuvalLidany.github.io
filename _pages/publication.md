@@ -31,7 +31,11 @@ This paper examines the role of compatibility across <i>standalone</i> technolog
 
 <p> <strong>The Effect of Closed Ecosystems on Consumers' Consideration Sets</strong>.</p>
 
-<br> 
+<br>
+
+<p> <strong>Food Delivery Drivers' Optimization Amid Market Frictions</strong>.</p>
+
+<br>
 
 <span style="font-size: 25px; font-weight: bold;">Policy Papers</span>
 
