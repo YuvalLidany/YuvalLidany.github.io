@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an economist and a fifth-year PhD candidate at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a>. In July 2026, I will join the Economics Department at Tel Aviv University as an Assistant Professor after completing a one-year postdoc under the mentorship of <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #21618C;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto.
+I am an economist and a fifth-year PhD candidate at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a>. In July 2026, I will join the Economics Department at Tel Aviv University as an Assistant Professor after completing a one-year postdoc under the mentorship of <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto.
 
 <br> 
 <be>
