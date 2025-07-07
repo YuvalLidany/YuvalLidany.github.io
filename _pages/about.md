@@ -6,7 +6,10 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a Ph.D. candidate in Economics at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a>. In July 2026, I will join the Economics Department at Tel Aviv University as an Assistant Professor, after completing a one-year postdoc fellowship mentored by <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto.
+I am an incoming Postdoctoral Fellow mentored by <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto. In July 2026, I will join the Economics Department at Tel Aviv University as an Assistant Professor. 
+
+I received my Ph.D. in Economics from <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a> in 2025.
+
 
 <be>
 My research centers on empirical industrial organization (IO) and antitrust, incorporating experimental economics to gain deeper insights. I combine IO structural models with experimental designs to explore market complexities and examine issues in competition and antitrust.
