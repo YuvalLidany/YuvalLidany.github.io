@@ -34,7 +34,6 @@ This paper examines how compatibility across <i>standalone</i> technology produc
 
 <br>
 
-<br>
 
 <span style="font-size: 25px; font-weight: bold;">Policy Papers</span>
 
