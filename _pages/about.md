@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an incoming Postdoctoral Fellow mentored by <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto. In July 2026, I will join the Economics Department at Tel Aviv University as an Assistant Professor. 
+I am an incoming Postdoctoral Fellow mentored by <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto. Upon completion of my fellowship, I will join the Economics Department at Tel Aviv University as an Assistant Professor.
 
 I completed my Ph.D. in Economics at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a> in 2025, advised by <a href="https://charliemurry.github.io/" target="_blank" rel="noopener noreferrer">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research" target="_blank" rel="noopener noreferrer">Lucas Coffman</a>, and <a href="https://sites.google.com/bc.edu/michael-grubb" target="_blank" rel="noopener noreferrer">Michael D. Grubb</a>.
 
