@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-<embed src="/files/Yuval_Lidany_CV.pdf" type="application/pdf" width="100%" height="1200px" />
+<embed src="/files/Yuval_Lidany_CV.pdf" type="application/pdf" width="100%" height="600px" />
 
 {% include base_path %}
 <!--
