@@ -34,8 +34,6 @@ This paper examines how compatibility across <i>standalone</i> technology produc
 
 <br>
 
-<p> <strong>Food Delivery Drivers' Optimization Amid Market Frictions</strong>.</p>
-
 <br>
 
 <span style="font-size: 25px; font-weight: bold;">Policy Papers</span>
