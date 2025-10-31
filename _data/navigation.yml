@@ -8,4 +8,7 @@ main:
 
   - title: "Contact"
     url: /contact/    
+
+  - title: "CV"              # ⟵ add this block
+    url: /cv/
  
