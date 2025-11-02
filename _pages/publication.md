@@ -11,8 +11,8 @@ author_profile: true
 
 <a href="https://YuvalLidany.github.io/files/JMP.pdf" target="_blank" style="text-decoration: none;">
     <strong style="text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
-        Cross-Product Compatibility, Lock-In, and Market Power: The Case of Smartphones and Laptops
-    </strong> (JMP)
+        &ldquo;Cross-Product Compatibility, Lock-In, and Market Power: The Case of Smartphones and Laptops&rdquo;
+    </strong> (JMP).
 </a>
 
 
@@ -26,18 +26,22 @@ This paper examines how compatibility across <i>standalone</i> technology produc
 
 <br> 
 
-<p> <strong>Closed Ecosystems and Firms' Investments</strong>.</p>
+<p> <strong>&ldquo;Closed Ecosystems and Firms' Investments.&rdquo;</strong></p>
  
 <br> 
 
-<p> <strong>The Effect of Closed Ecosystems on Consumers' Consideration Sets</strong>.</p>
+<p> <strong>&ldquo;The Effect of Closed Ecosystems on Consumers' Consideration Sets.&rdquo;</strong></p>
+
+<br>
+
+<p> <strong>&ldquo;AI as a GPT: Implications for Competition,&rdquo;</strong> with Avi Goldfarb.</p>
 
 <br>
 
 
 <span style="font-size: 25px; font-weight: bold;">Policy Papers</span>
 
-<p> <strong> Measuring Willingness to Pay for Compatibility Between Smartphones and Laptops</strong>, August 2024.</p>
+<p> <strong> &ldquo;Measuring Willingness to Pay for Compatibility Between Smartphones and Laptops&rdquo;</strong>, August 2024.</p>
 
 <!--
 report to the <i>Antitrust Division of the Department of Justice</i>,
