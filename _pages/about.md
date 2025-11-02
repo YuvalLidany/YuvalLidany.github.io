@@ -6,15 +6,17 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an incoming Postdoctoral Fellow mentored by <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto. Upon completion of my fellowship, I will join the Economics Department at Tel Aviv University as an Assistant Professor.
+I am a Postdoctoral Fellow mentored by <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto. Upon completion of my fellowship, I will join the Economics Department at Tel Aviv University as an Assistant Professor.
+
+My research centers on empirical industrial organization (IO) and antitrust, combining structural models and experimental approaches to study consumer and firm behavior and the impact of policy on market outcomes.
 
 I completed my Ph.D. in Economics at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #5dade2;text-decoration: none;">Boston College</a> in 2025, advised by <a href="https://charliemurry.github.io/" target="_blank" rel="noopener noreferrer">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research" target="_blank" rel="noopener noreferrer">Lucas Coffman</a>, and <a href="https://sites.google.com/bc.edu/michael-grubb" target="_blank" rel="noopener noreferrer">Michael D. Grubb</a>.
 
-
+<!--
 <be>
-My research centers on empirical industrial organization (IO) and antitrust, incorporating experimental economics to gain deeper insights. I combine IO structural models with experimental designs to explore market complexities and examine issues in competition and antitrust.
-
-<!--My research focuses on empirical industrial organization (IO) and antitrust, integrating experimental economics to enhance insights. I specialize in combining IO structural models with experimental designs to delve into market complexities, providing rigorous insights into antitrust issues and market dynamics.-->
+My research centers on empirical industrial organization (IO) and antitrust, using structural models and experimental approaches to study firm behavior and policy impacts on market outcomes.
+  
+My research focuses on empirical industrial organization (IO) and antitrust, integrating experimental economics to enhance insights. I specialize in combining IO structural models with experimental designs to delve into market complexities, providing rigorous insights into antitrust issues and market dynamics.-->
 
 <!--My primary research areas include empirical industrial organization, antitrust, and experimental economics. I construct and utilize IO structural models and experimental designs to analyze interdependent markets.-->
 
