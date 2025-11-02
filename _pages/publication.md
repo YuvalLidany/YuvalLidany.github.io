@@ -30,7 +30,7 @@ This paper examines how compatibility across <i>standalone</i> technology produc
  
 <br> 
 
-<p> <strong>&ldquo;The Effect of Closed Ecosystems on Consumers' Consideration Sets.&rdquo;</strong></p>
+<p> <strong>&ldquo;The Effect of Closed Ecosystems on Consumers' Consideration Sets,&rdquo;</strong> with Lucas Coffman.</p>
 
 <br>
 
