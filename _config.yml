@@ -11,10 +11,10 @@ locale                   : "en-US"
 title                    : "Yuval Lidany"
 title_separator          : "-"
 name                     : &name "Yuval Lidany"
-description              : &description "personal description"
+description              : &description "Yuval Lidany is an economist and Postdoctoral Fellow at Harvard Business School. Research in empirical industrial organization (IO) and antitrust; incoming Assistant Professor at Tel Aviv University."
 url                      : https://YuvalLidany.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "YuvalLidany/YuvalLidany.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -25,7 +25,7 @@ author:
   name             : "Yuval Lidany"
  # pronouns         : # example: "she/her"  
  # bio              : ""
-  location         : "Toronto, CA/Cambridge, MA, USA"
+  location         : "Cambridge, MA, USA"
  # employer         : "Red Brick University"
  # uri              : # URL
   email            : "yuval.lidany@rotman.utoronto.ca" 
@@ -57,7 +57,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "yuval-lidany-6638b4395"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -126,7 +126,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "profile.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -137,7 +137,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               :  false # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
     tracking_id          :
 

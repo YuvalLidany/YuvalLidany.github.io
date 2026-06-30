@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a Postdoctoral Fellow mentored by <a href="https://www.avigoldfarb.com/" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Avi Goldfarb</a> at the Rotman School of Management, University of Toronto. Upon completion of my fellowship, I will join the Economics Department at Tel Aviv University as an Assistant Professor.
+I am a Postdoctoral Fellow at Harvard Business School, working with <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=775022" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Chiara Farronato</a> and <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=14938" target="_blank" rel="noopener noreferrer" style="color: #2E86C1;text-decoration: none;">Feng Zhu</a>. Upon completion of my fellowship, I will join the Economics Department at Tel Aviv University as an Assistant Professor.
 
 My research centers on empirical industrial organization (IO) and antitrust, combining structural models and experimental approaches to study consumer and firm behavior and the impact of policy on market outcomes.
 
