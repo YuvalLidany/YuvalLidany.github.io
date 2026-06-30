@@ -9,7 +9,7 @@ author_profile: true
 [<strong>Cross-Product Compatibility, Lock-In, and Market Power: The Case of Smartphones and Laptops</strong>. (JMP)](https://YuvalLidany.github.io/files/JMP.pdf) 
 <a href="https://YuvalLidany.github.io/files/JMP.pdf" target="_blank"><strong>Cross-Product Compatibility, Lock-In, and Market Power: The Case of Smartphones and Laptops</strong> (JMP)</a> -->
 
-<a href="https://YuvalLidany.github.io/files/JMP.pdf" target="_blank" style="text-decoration: none;">
+<a href="https://YuvalLidany.github.io/files/Lidany CROSS-PRODUCT COMPATIBILITY, LOCK-IN, AND MARKET POWER: THE CASE OF SMARTPHONES AND LAPTOPS.pdf" target="_blank" style="text-decoration: none;">
     <strong style="text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
         &ldquo;Cross-Product Compatibility, Lock-In, and Market Power: The Case of Smartphones and Laptops&rdquo;
     </strong> (JMP).
