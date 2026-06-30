@@ -34,7 +34,7 @@ This paper examines how compatibility across <i>standalone</i> technology produc
 
 <br>
 
-<p> <strong>&ldquo;AI as a GPT: Implications for Competition,&rdquo;</strong> with Avi Goldfarb.</p>
+<p> <strong>&ldquo;AI as a GPT: Implications for Competition,&rdquo;</strong> with Avi Goldfarb (Forthcoming in Antitrust Law Journal).</p>
 
 <br>
 
