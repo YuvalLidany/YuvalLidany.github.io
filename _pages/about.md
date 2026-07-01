@@ -13,7 +13,7 @@ My research centers on empirical industrial organization (IO) and antitrust, com
 I completed my Ph.D. in Economics at <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/economics.html" target="_blank" rel="noopener noreferrer" style="color: #1f5c93;text-decoration: none;">Boston College</a> in 2025, advised by <a href="https://charliemurry.github.io/" target="_blank" rel="noopener noreferrer" style="color: #1f5c93;text-decoration: none;">Charlie Murry</a>, <a href="https://sites.google.com/site/lucascoffman/research" target="_blank" rel="noopener noreferrer" style="color: #1f5c93;text-decoration: none;">Lucas Coffman</a>, and <a href="https://sites.google.com/bc.edu/michael-grubb" target="_blank" rel="noopener noreferrer" style="color: #1f5c93;text-decoration: none;">Michael D. Grubb</a>.
 
 <div class="home-links">
-  <a href="/files/Yuval_Lidany_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Curriculum Vitae</a>
+  <a href="/cv/"><i class="fas fa-file-pdf"></i> Curriculum Vitae</a>
   <a href="mailto:{{ site.author.email }}"><i class="fas fa-envelope"></i> Email</a>
   <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
 </div>

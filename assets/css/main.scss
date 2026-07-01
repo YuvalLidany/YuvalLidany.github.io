@@ -144,12 +144,24 @@ h1, h2, h3, h4,
 .cv-embed {
   display: block;
   width: 100%;
+  max-width: 850px;
+  margin: 0.5em auto 0;
   height: 82vh;
   min-height: 560px;
   border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 6px;
   background: #fff;
 }
+/* CV page has no sidebar → make its content span full width and center it */
+#main:has(.cv-embed) .archive {
+  width: 100%;
+  max-width: 100%;
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+#main:has(.cv-embed) .page__title { text-align: center; }
+.cv-actions { text-align: center; }
 
 /* comfortable reading rhythm */
 .page__content { font-size: 1.03em; line-height: 1.72; }
