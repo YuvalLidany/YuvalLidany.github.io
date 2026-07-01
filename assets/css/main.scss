@@ -145,14 +145,24 @@ h1, h2, h3, h4,
   max-width: 1000px;
   margin: 0.5em auto 0;
 }
-.cv-page-canvas {
-  display: block;
-  width: 100%;
+.cv-page {
+  position: relative;
   margin: 0 auto 1.2em;
   border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 6px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  line-height: 0;
 }
+.cv-page-canvas {
+  display: block;
+  width: 100%;
+}
+.cv-link {
+  position: absolute;
+  z-index: 2;
+}
+.cv-link:hover { background: rgba(31, 92, 147, 0.14); border-radius: 2px; }
 /* CV page has no sidebar → make its content span full width and center it */
 #main:has(.cv-viewer) .archive {
   width: 100%;
