@@ -24,6 +24,11 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
+<!-- Inter web font for a cleaner, more modern look -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
 
 <!-- Support for MatJax -->
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -38,6 +43,26 @@
 {% if page.citation_publication_date %}<meta name="citation_publication_date" content="{{ page.citation_publication_date }}">{% endif %}
 {% if page.citation_journal_title %}<meta name="citation_journal_title" content="{{ page.citation_journal_title }}">{% endif %}
 {% if page.citation_pdf_url %}<meta name="citation_pdf_url" content="{{ page.citation_pdf_url }}">{% endif %}
+{% endif %}
+
+<!-- Structured data: identify this site as the person Yuval Lidany (homepage only) -->
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yuval Lidany",
+  "url": "https://yuvallidany.github.io",
+  "image": "https://yuvallidany.github.io/images/profile.png",
+  "jobTitle": "Postdoctoral Fellow",
+  "affiliation": { "@type": "Organization", "name": "Harvard Business School" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Boston College" },
+  "knowsAbout": ["Industrial Organization", "Antitrust", "Empirical Economics"],
+  "sameAs": [
+    "https://www.linkedin.com/in/yuval-lidany-6638b4395/"
+  ]
+}
+</script>
 {% endif %}
 
 <!-- end custom head snippets -->
