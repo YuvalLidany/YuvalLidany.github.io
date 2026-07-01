@@ -141,26 +141,27 @@ h1, h2, h3, h4,
   transition: background 0.15s ease;
 }
 .cv-download:hover { background: #17466f; color: #ffffff !important; }
-.cv-embed {
+.cv-viewer {
+  max-width: 800px;
+  margin: 0.5em auto 0;
+}
+.cv-page-canvas {
   display: block;
   width: 100%;
-  max-width: 850px;
-  margin: 0.5em auto 0;
-  height: 82vh;
-  min-height: 560px;
+  margin: 0 auto 1.2em;
   border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 6px;
-  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 /* CV page has no sidebar → make its content span full width and center it */
-#main:has(.cv-embed) .archive {
+#main:has(.cv-viewer) .archive {
   width: 100%;
   max-width: 100%;
   float: none;
   padding-left: 0;
   padding-right: 0;
 }
-#main:has(.cv-embed) .page__title { text-align: center; }
+#main:has(.cv-viewer) .page__title { text-align: center; }
 .cv-actions { text-align: center; }
 
 /* comfortable reading rhythm */
