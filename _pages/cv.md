@@ -22,29 +22,32 @@ redirect_from:
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
   var container = document.getElementById('cv-viewer');
   var url = '/files/Yuval_Lidany_CV.pdf';
+  var dpr = Math.min(window.devicePixelRatio || 1, 3);
   pdfjsLib.getDocument(url).promise.then(function (pdf) {
     var renderPage = function (n) {
       if (n > pdf.numPages) { return; }
       pdf.getPage(n).then(function (page) {
-        var targetWidth = container.clientWidth || 800;
+        var cssWidth = container.clientWidth || 800;
         var base = page.getViewport({ scale: 1 });
-        var viewport = page.getViewport({ scale: targetWidth / base.width });
+        var cssScale = cssWidth / base.width;
+        var renderViewport = page.getViewport({ scale: cssScale * dpr }); // high-res render
+        var cssViewport = page.getViewport({ scale: cssScale });          // CSS-px coords for link overlays
 
         var wrap = document.createElement('div');
         wrap.className = 'cv-page';
         var canvas = document.createElement('canvas');
         canvas.className = 'cv-page-canvas';
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
+        canvas.width = renderViewport.width;   // backing store at device resolution
+        canvas.height = renderViewport.height; // displayed at 100% (CSS width) → crisp
         wrap.appendChild(canvas);
         container.appendChild(wrap);
 
-        page.render({ canvasContext: canvas.getContext('2d'), viewport: viewport }).promise.then(function () {
+        page.render({ canvasContext: canvas.getContext('2d'), viewport: renderViewport }).promise.then(function () {
           return page.getAnnotations();
         }).then(function (annotations) {
           (annotations || []).forEach(function (a) {
             if (a.subtype === 'Link' && a.url) {
-              var r = viewport.convertToViewportRectangle(a.rect);
+              var r = cssViewport.convertToViewportRectangle(a.rect);
               var link = document.createElement('a');
               link.href = a.url;
               link.target = '_blank';
