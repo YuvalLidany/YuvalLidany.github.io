@@ -11,4 +11,5 @@ redirect_from:
   <a class="cv-download" href="/files/Yuval_Lidany_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
 </p>
 
+<!-- native browser PDF viewer -->
 <iframe class="cv-embed" src="/files/Yuval_Lidany_CV.pdf" title="Yuval Lidany — CV"></iframe>
