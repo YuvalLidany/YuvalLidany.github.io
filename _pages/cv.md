@@ -22,7 +22,7 @@ redirect_from:
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
   var container = document.getElementById('cv-viewer');
   var url = '/files/Yuval_Lidany_CV.pdf';
-  var dpr = Math.min(window.devicePixelRatio || 1, 3);
+  var dpr = Math.min((window.devicePixelRatio || 1) * 2, 3);
   pdfjsLib.getDocument(url).promise.then(function (pdf) {
     var renderPage = function (n) {
       if (n > pdf.numPages) { return; }
