@@ -6,6 +6,6 @@ main:
   - title: "Contact"
     url: /contact/    
 
-  - title: "CV"
-    url: /files/Yuval_Lidany_CV.pdf
+  - title: "CV"              # ⟵ add this block
+    url: /cv/
  
