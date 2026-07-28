@@ -26,13 +26,18 @@ sitemap: false
   viewer.className = 'cv-embed';
   viewer.setAttribute('data-src', '/files/Yuval_Lidany_CV.pdf');
   iframe.parentNode.replaceChild(viewer, iframe);
+  function restore() {
+    if (viewer.parentNode) { viewer.parentNode.replaceChild(iframe, viewer); }
+  }
   function add(src, cb) {
     var s = document.createElement('script');
     s.src = src;
-    if (cb) s.onload = cb;
+    s.onerror = restore;
+    if (cb) { s.onload = cb; }
     document.body.appendChild(s);
   }
   add('/assets/js/pdfjs/pdf.min.js', function () {
+    if (!window.pdfjsLib) { restore(); return; }
     window.pdfjsLib.GlobalWorkerOptions.workerSrc = '/assets/js/pdfjs/pdf.worker.min.js';
     add('/assets/js/cv-viewer.js');
   });
