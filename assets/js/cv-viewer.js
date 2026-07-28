@@ -59,33 +59,6 @@
     return fitWidth;
   }
 
-  /* Union of the text bounding boxes across pages; falls back to full page
-     width when the result looks implausible. */
-  function computeCrop(pages) {
-    return Promise.all(pages.map(function (page) {
-      return page.getTextContent().then(function (tc) {
-        var minX = Infinity, maxX = -Infinity;
-        tc.items.forEach(function (it) {
-          if (!it.width) return;
-          var x = it.transform[4];
-          if (x < minX) minX = x;
-          if (x + it.width > maxX) maxX = x + it.width;
-        });
-        return { minX: minX, maxX: maxX, pageW: page.getViewport({ scale: 1 }).width };
-      });
-    })).then(function (boxes) {
-      var minX = Infinity, maxX = -Infinity, pageW = 0;
-      boxes.forEach(function (b) {
-        if (b.minX < minX) minX = b.minX;
-        if (b.maxX > maxX) maxX = b.maxX;
-        if (b.pageW > pageW) pageW = b.pageW;
-      });
-      var pad = 6;
-      if (!isFinite(minX) || !isFinite(maxX) || maxX - minX < pageW * 0.3) return null;
-      return { x0: Math.max(0, minX - pad), x1: Math.min(pageW, maxX + pad) };
-    }).catch(function () { return null; });
-  }
-
   function renderDocument(cssWidth) {
     if (!pdfDoc || cssWidth <= 0) return;
     if (rendering) { pendingZoom = cssWidth; return; }
@@ -260,12 +233,10 @@
       var pagePromises = [];
       for (var n = 1; n <= pdf.numPages; n++) pagePromises.push(pdf.getPage(n));
       return Promise.all(pagePromises).then(function (pages) {
-        return computeCrop(pages).then(function (c) {
-          crop = c;
-          /* the document's natural on-screen size (96 dpi), like the native
-             viewer shows it: readable text, sideways scroll for line ends */
-          naturalPx = (c ? c.x1 - c.x0 : pages[0].getViewport({ scale: 1 }).width) * 96 / 72;
-        });
+        /* the document's natural on-screen size (96 dpi), like the native
+           viewer shows it: full paper visible from its left edge, readable
+           text, sideways scroll for the rest of each line */
+        naturalPx = pages[0].getViewport({ scale: 1 }).width * 96 / 72;
       }).then(function () {
         measureFitWidth();
         zoom = Math.max(1, Math.min(MAX_ZOOM, START_SCALE * naturalPx / fitWidth));
