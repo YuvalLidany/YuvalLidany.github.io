@@ -13,8 +13,10 @@ sitemap: false
 <!-- native browser PDF viewer -->
 <iframe class="cv-embed" src="/files/Yuval_Lidany_CV.pdf" title="Yuval Lidany — CV"></iframe>
 <script>
-// Phones/tablets only: swap the iframe for a PDF.js-rendered copy of the same
-// PDF so its links become tappable. On laptops this script does nothing.
+/* Phones/tablets only: swap the iframe for a PDF.js-rendered copy of the same
+   PDF so its links become tappable. On laptops this script does nothing.
+   NOTE: no "//" comments here — the HTML compressor collapses this script
+   onto one line, and a "//" would comment out everything after it. */
 (function () {
   if (!window.matchMedia || !matchMedia('(hover: none) and (pointer: coarse)').matches) return;
   var iframe = document.querySelector('iframe.cv-embed');
