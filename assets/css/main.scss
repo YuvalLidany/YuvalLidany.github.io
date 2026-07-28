@@ -154,10 +154,13 @@ h1, h2, h3, h4,
    ignores links. div.cv-embed is the script-swapped viewer; the desktop
    iframe.cv-embed is unaffected. */
 div.cv-embed {
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: auto;
+  max-height: 180vh;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y; /* pinch and double-tap go to the viewer, not the browser */
 }
+div.cv-embed .cv-zoom { transform-origin: 0 0; }
 div.cv-embed .cv-page { position: relative; margin: 0 auto; }
 div.cv-embed canvas { display: block; }
 .cv-page__link { position: absolute; display: block; }

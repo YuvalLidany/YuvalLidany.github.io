@@ -1,6 +1,8 @@
 /* Renders the CV PDF with PDF.js inside the same white .cv-embed box used
    today, with working hyperlinks. Only ever loaded on phones/tablets, where
-   the browser's native inline PDF preview ignores link annotations. */
+   the browser's native inline PDF preview ignores link annotations.
+   Supports pinch-to-zoom and double-tap-to-zoom like a native PDF viewer;
+   pages are re-rendered at the new scale so zoomed text stays sharp. */
 (function () {
   'use strict';
 
@@ -8,26 +10,45 @@
   if (!container || !window.pdfjsLib) return;
 
   var src = container.getAttribute('data-src');
-  var renderedWidth = 0;
+  var MAX_ZOOM = 4;
+  var MAX_CANVAS_PIXELS = 16000000; /* iOS Safari canvas limit */
 
-  function availableWidth() {
-    return container.clientWidth;
+  var zoomLayer = document.createElement('div');
+  zoomLayer.className = 'cv-zoom';
+  container.textContent = '';
+  container.appendChild(zoomLayer);
+
+  var pdfDoc = null;
+  var zoom = 1;          /* 1 = page fits container width */
+  var fitWidth = 0;
+  var rendering = false;
+  var pendingZoom = null;
+
+  function measureFitWidth() {
+    fitWidth = container.clientWidth;
+    return fitWidth;
   }
 
-  function renderDocument(pdf) {
-    var width = availableWidth();
-    if (width <= 0) return;
-    renderedWidth = width;
-    var dpr = Math.min(window.devicePixelRatio || 1, 3);
+  function renderDocument(cssWidth) {
+    if (!pdfDoc || cssWidth <= 0) return;
+    if (rendering) { pendingZoom = cssWidth; return; }
+    rendering = true;
 
     var pagePromises = [];
-    for (var n = 1; n <= pdf.numPages; n++) pagePromises.push(pdf.getPage(n));
+    for (var n = 1; n <= pdfDoc.numPages; n++) pagePromises.push(pdfDoc.getPage(n));
 
     Promise.all(pagePromises).then(function (pages) {
-      container.textContent = '';
+      zoomLayer.textContent = '';
+      zoomLayer.style.transform = '';
+      zoomLayer.style.width = cssWidth + 'px';
+
       pages.forEach(function (page) {
         var base = page.getViewport({ scale: 1 });
-        var vp = page.getViewport({ scale: width / base.width });
+        var vp = page.getViewport({ scale: cssWidth / base.width });
+
+        var dpr = Math.min(window.devicePixelRatio || 1, 3);
+        var maxDpr = Math.sqrt(MAX_CANVAS_PIXELS / (vp.width * vp.height));
+        if (dpr > maxDpr) dpr = maxDpr;
 
         var wrap = document.createElement('div');
         wrap.className = 'cv-page';
@@ -40,7 +61,7 @@
         canvas.style.width = vp.width + 'px';
         canvas.style.height = vp.height + 'px';
         wrap.appendChild(canvas);
-        container.appendChild(wrap);
+        zoomLayer.appendChild(wrap);
 
         page.render({
           canvasContext: canvas.getContext('2d'),
@@ -65,7 +86,105 @@
           });
         });
       });
+
+      rendering = false;
+      if (pendingZoom !== null) {
+        var w = pendingZoom;
+        pendingZoom = null;
+        renderDocument(w);
+      }
     });
+  }
+
+  /* Change zoom, keeping the content point at (anchorX, anchorY) — container
+     coordinates — stationary. Re-renders so the result is sharp. */
+  function setZoom(newZoom, anchorX, anchorY) {
+    newZoom = Math.max(1, Math.min(MAX_ZOOM, newZoom));
+    if (Math.abs(newZoom - zoom) < 0.01) return;
+    var ratio = newZoom / zoom;
+    var newScrollLeft = (container.scrollLeft + anchorX) * ratio - anchorX;
+    var newScrollTop = (container.scrollTop + anchorY) * ratio - anchorY;
+    zoom = newZoom;
+    renderDocument(fitWidth * zoom);
+    container.scrollLeft = Math.max(0, newScrollLeft);
+    container.scrollTop = Math.max(0, newScrollTop);
+  }
+
+  function attachGestures() {
+    var pinch = null;
+    var lastTap = { time: 0, x: 0, y: 0 };
+
+    function touchDist(t) {
+      var dx = t[0].clientX - t[1].clientX;
+      var dy = t[0].clientY - t[1].clientY;
+      return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    function containerPoint(clientX, clientY) {
+      var rect = container.getBoundingClientRect();
+      return { x: clientX - rect.left, y: clientY - rect.top };
+    }
+
+    container.addEventListener('touchstart', function (e) {
+      if (e.touches.length === 2) {
+        var mid = containerPoint(
+          (e.touches[0].clientX + e.touches[1].clientX) / 2,
+          (e.touches[0].clientY + e.touches[1].clientY) / 2);
+        pinch = {
+          startDist: touchDist(e.touches),
+          startZoom: zoom,
+          midX: mid.x,
+          midY: mid.y,
+          startScrollLeft: container.scrollLeft,
+          startScrollTop: container.scrollTop,
+          ratio: 1
+        };
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    container.addEventListener('touchmove', function (e) {
+      if (pinch && e.touches.length === 2) {
+        pinch.ratio = touchDist(e.touches) / pinch.startDist;
+        var target = pinch.startZoom * pinch.ratio;
+        if (target < 1) pinch.ratio = 1 / pinch.startZoom;
+        if (target > MAX_ZOOM) pinch.ratio = MAX_ZOOM / pinch.startZoom;
+        /* live preview: cheap CSS scale, re-rendered sharp on release */
+        var originX = pinch.startScrollLeft + pinch.midX;
+        var originY = pinch.startScrollTop + pinch.midY;
+        zoomLayer.style.transformOrigin = originX + 'px ' + originY + 'px';
+        zoomLayer.style.transform = 'scale(' + pinch.ratio + ')';
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    container.addEventListener('touchend', function (e) {
+      if (pinch && e.touches.length < 2) {
+        var p = pinch;
+        pinch = null;
+        zoomLayer.style.transform = '';
+        setZoom(p.startZoom * p.ratio, p.midX, p.midY);
+        return;
+      }
+      if (e.touches.length === 0 && e.changedTouches.length === 1) {
+        var t = e.changedTouches[0];
+        var now = Date.now();
+        var moved = Math.abs(t.clientX - lastTap.x) + Math.abs(t.clientY - lastTap.y);
+        if (now - lastTap.time < 300 && moved < 40) {
+          lastTap.time = 0;
+          var pt = containerPoint(t.clientX, t.clientY);
+          setZoom(zoom > 1.2 ? 1 : 2, pt.x, pt.y);
+          e.preventDefault();
+        } else {
+          lastTap = { time: now, x: t.clientX, y: t.clientY };
+        }
+      }
+    }, { passive: false });
+
+    /* iOS fires proprietary gesture events for pinch; stop page-level zoom
+       while the fingers are inside the viewer */
+    container.addEventListener('gesturestart', function (e) { e.preventDefault(); });
+    container.addEventListener('gesturechange', function (e) { e.preventDefault(); });
   }
 
   function load() {
@@ -73,12 +192,15 @@
       ? pdfjsLib.getDocument({ data: window.CV_PDF_DATA })
       : pdfjsLib.getDocument(src);
     task.promise.then(function (pdf) {
-      renderDocument(pdf);
+      pdfDoc = pdf;
+      renderDocument(measureFitWidth());
+      attachGestures();
       var resizeTimer = null;
       window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
-          if (Math.abs(availableWidth() - renderedWidth) > 30) renderDocument(pdf);
+          var old = fitWidth;
+          if (Math.abs(measureFitWidth() - old) > 30) renderDocument(fitWidth * zoom);
         }, 200);
       });
     }).catch(function () {
