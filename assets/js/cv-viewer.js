@@ -19,6 +19,32 @@
   container.textContent = '';
   container.appendChild(zoomLayer);
 
+  /* wrapper so the full-screen button can sit on top of the viewer */
+  var shell = document.createElement('div');
+  shell.className = 'cv-shell';
+  container.parentNode.replaceChild(shell, container);
+  shell.appendChild(container);
+
+  var expandBtn = document.createElement('button');
+  expandBtn.type = 'button';
+  expandBtn.className = 'cv-expand';
+  expandBtn.textContent = 'Full screen';
+  shell.appendChild(expandBtn);
+
+  var fullscreen = false;
+  function toggleFullscreen() {
+    fullscreen = !fullscreen;
+    container.className = fullscreen ? 'cv-embed cv-embed--full' : 'cv-embed';
+    expandBtn.className = fullscreen ? 'cv-expand cv-expand--full' : 'cv-expand';
+    expandBtn.textContent = fullscreen ? '✕ Close' : 'Full screen';
+    document.documentElement.style.overflow = fullscreen ? 'hidden' : '';
+    document.body.style.overflow = fullscreen ? 'hidden' : '';
+    renderDocument(measureFitWidth() * zoom);
+    container.scrollTop = 0;
+    container.scrollLeft = 0;
+  }
+  expandBtn.addEventListener('click', toggleFullscreen);
+
   var pdfDoc = null;
   var crop = null;       /* {x0, x1} in PDF units: horizontal text extent */
   var zoom = 1;          /* 1 = cropped text width fits the container */
@@ -244,6 +270,7 @@
         });
       });
     }).catch(function () {
+      expandBtn.style.display = 'none';
       container.innerHTML = '<p style="padding:2em;text-align:center;">' +
         'Could not display the CV here. <a href="' + src + '">Open the PDF directly</a>.</p>';
     });
