@@ -19,14 +19,6 @@ sitemap: false
   div.cv-embed .cv-page { position: relative; margin: 0 auto; background: #fff; }
   div.cv-embed .cv-page + .cv-page { border-top: 1px solid #e8e8e8; }
   .cv-page__link { position: absolute; display: block; }
-  .cv-shell { position: relative; }
-  .cv-expand { position: absolute; top: 8px; left: 8px; z-index: 5; border: 0; border-radius: 999px;
-    padding: 0.4em 0.75em; font-family: "Inter", sans-serif; font-size: 0.72rem; font-weight: 600;
-    color: #fff; background: rgba(31, 92, 147, 0.65); cursor: pointer; }
-  .cv-expand--full { position: fixed; top: 12px; left: auto; right: 12px; z-index: 10001;
-    background: rgba(31, 92, 147, 0.92); }
-  div.cv-embed--full { position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%;
-    height: 100%; max-height: none; margin: 0; z-index: 10000; border: 0; border-radius: 0; }
 </style>
 <script>
 /* Phones/tablets only: swap the iframe for a PDF.js-rendered copy of the same
@@ -52,10 +44,10 @@ sitemap: false
     if (cb) { s.onload = cb; }
     document.body.appendChild(s);
   }
-  add('/assets/js/pdfjs/pdf.min.js?v=13', function () {
+  add('/assets/js/pdfjs/pdf.min.js?v=15', function () {
     if (!window.pdfjsLib) { restore(); return; }
-    window.pdfjsLib.GlobalWorkerOptions.workerSrc = '/assets/js/pdfjs/pdf.worker.min.js?v=13';
-    add('/assets/js/cv-viewer.js?v=13');
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc = '/assets/js/pdfjs/pdf.worker.min.js?v=15';
+    add('/assets/js/cv-viewer.js?v=15');
   });
 })();
 </script>
