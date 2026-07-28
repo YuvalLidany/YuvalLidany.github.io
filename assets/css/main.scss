@@ -160,8 +160,8 @@ div.cv-embed {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x pan-y; /* pinch and double-tap go to the viewer, not the browser */
-  /* the paper floats on the dark grey surface of a real PDF viewer */
-  background: #525659;
+  /* the paper floats on a light surface; its edge reads via the shadow */
+  background: #eceef1;
 }
 div.cv-embed .cv-zoom { transform-origin: 0 0; padding: 12px; }
 div.cv-embed .cv-page {
