@@ -159,15 +159,23 @@ div.cv-embed {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x pan-y; /* pinch and double-tap go to the viewer, not the browser */
-  /* edge-to-edge on phones: every pixel of width makes the text bigger */
+  /* edge-to-edge on phones */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   border-left: 0;
   border-right: 0;
   border-radius: 0;
+  /* the paper floats on a grey surface, like a real PDF viewer */
+  background: #d5d8dc;
 }
-div.cv-embed .cv-zoom { transform-origin: 0 0; }
-div.cv-embed .cv-page { position: relative; margin: 0 auto; }
+div.cv-embed .cv-zoom { transform-origin: 0 0; padding: 12px; }
+div.cv-embed .cv-page {
+  position: relative;
+  margin: 0 auto 12px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+div.cv-embed .cv-page:last-child { margin-bottom: 0; }
 div.cv-embed canvas { display: block; }
 .cv-page__link { position: absolute; display: block; }
 
