@@ -1,8 +1,9 @@
 /* Renders the CV PDF with PDF.js inside the same white .cv-embed box used
    today, with working hyperlinks. Only ever loaded on phones/tablets, where
    the browser's native inline PDF preview ignores link annotations.
-   Supports pinch-to-zoom and double-tap-to-zoom like a native PDF viewer;
-   pages are re-rendered at the new scale so zoomed text stays sharp. */
+   The page's blank side margins are cropped so the text itself fills the
+   screen width. Supports pinch-to-zoom and double-tap-to-zoom; pages are
+   re-rendered at the new scale so zoomed text stays sharp. */
 (function () {
   'use strict';
 
@@ -19,7 +20,8 @@
   container.appendChild(zoomLayer);
 
   var pdfDoc = null;
-  var zoom = 1;          /* 1 = page fits container width */
+  var crop = null;       /* {x0, x1} in PDF units: horizontal text extent */
+  var zoom = 1;          /* 1 = cropped text width fits the container */
   var fitWidth = 0;
   var rendering = false;
   var pendingZoom = null;
@@ -27,6 +29,33 @@
   function measureFitWidth() {
     fitWidth = container.clientWidth;
     return fitWidth;
+  }
+
+  /* Union of the text bounding boxes across pages; falls back to full page
+     width when the result looks implausible. */
+  function computeCrop(pages) {
+    return Promise.all(pages.map(function (page) {
+      return page.getTextContent().then(function (tc) {
+        var minX = Infinity, maxX = -Infinity;
+        tc.items.forEach(function (it) {
+          if (!it.width) return;
+          var x = it.transform[4];
+          if (x < minX) minX = x;
+          if (x + it.width > maxX) maxX = x + it.width;
+        });
+        return { minX: minX, maxX: maxX, pageW: page.getViewport({ scale: 1 }).width };
+      });
+    })).then(function (boxes) {
+      var minX = Infinity, maxX = -Infinity, pageW = 0;
+      boxes.forEach(function (b) {
+        if (b.minX < minX) minX = b.minX;
+        if (b.maxX > maxX) maxX = b.maxX;
+        if (b.pageW > pageW) pageW = b.pageW;
+      });
+      var pad = 6;
+      if (!isFinite(minX) || !isFinite(maxX) || maxX - minX < pageW * 0.3) return null;
+      return { x0: Math.max(0, minX - pad), x1: Math.min(pageW, maxX + pad) };
+    }).catch(function () { return null; });
   }
 
   function renderDocument(cssWidth) {
@@ -44,7 +73,11 @@
 
       pages.forEach(function (page) {
         var base = page.getViewport({ scale: 1 });
-        var vp = page.getViewport({ scale: cssWidth / base.width });
+        var cropX0 = crop ? crop.x0 : 0;
+        var cropX1 = crop ? Math.min(crop.x1, base.width) : base.width;
+        var scale = cssWidth / (cropX1 - cropX0);
+        var vp = page.getViewport({ scale: scale });
+        var shift = cropX0 * scale;
 
         var dpr = Math.min(window.devicePixelRatio || 1, 3);
         var maxDpr = Math.sqrt(MAX_CANVAS_PIXELS / (vp.width * vp.height));
@@ -52,14 +85,16 @@
 
         var wrap = document.createElement('div');
         wrap.className = 'cv-page';
-        wrap.style.width = vp.width + 'px';
+        wrap.style.width = cssWidth + 'px';
         wrap.style.height = vp.height + 'px';
+        wrap.style.overflow = 'hidden';
 
         var canvas = document.createElement('canvas');
         canvas.width = Math.floor(vp.width * dpr);
         canvas.height = Math.floor(vp.height * dpr);
         canvas.style.width = vp.width + 'px';
         canvas.style.height = vp.height + 'px';
+        canvas.style.marginLeft = -shift + 'px';
         wrap.appendChild(canvas);
         zoomLayer.appendChild(wrap);
 
@@ -78,7 +113,7 @@
             link.target = '_blank';
             link.rel = 'noopener';
             link.className = 'cv-page__link';
-            link.style.left = Math.min(r[0], r[2]) + 'px';
+            link.style.left = (Math.min(r[0], r[2]) - shift) + 'px';
             link.style.top = Math.min(r[1], r[3]) + 'px';
             link.style.width = Math.abs(r[2] - r[0]) + 'px';
             link.style.height = Math.abs(r[3] - r[1]) + 'px';
@@ -193,15 +228,20 @@
       : pdfjsLib.getDocument(src);
     task.promise.then(function (pdf) {
       pdfDoc = pdf;
-      renderDocument(measureFitWidth());
-      attachGestures();
-      var resizeTimer = null;
-      window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-          var old = fitWidth;
-          if (Math.abs(measureFitWidth() - old) > 30) renderDocument(fitWidth * zoom);
-        }, 200);
+      var pagePromises = [];
+      for (var n = 1; n <= pdf.numPages; n++) pagePromises.push(pdf.getPage(n));
+      return Promise.all(pagePromises).then(computeCrop).then(function (c) {
+        crop = c;
+        renderDocument(measureFitWidth());
+        attachGestures();
+        var resizeTimer = null;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            var old = fitWidth;
+            if (Math.abs(measureFitWidth() - old) > 30) renderDocument(fitWidth * zoom);
+          }, 200);
+        });
       });
     }).catch(function () {
       container.innerHTML = '<p style="padding:2em;text-align:center;">' +
