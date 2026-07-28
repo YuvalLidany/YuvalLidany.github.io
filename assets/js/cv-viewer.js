@@ -48,6 +48,7 @@
   var pdfDoc = null;
   var crop = null;       /* {x0, x1} in PDF units: horizontal text extent */
   var zoom = 1;          /* 1 = cropped text width fits the container */
+  var naturalPx = 0;     /* document width in CSS px at natural (96 dpi) size */
   var fitWidth = 0;
   var rendering = false;
   var pendingZoom = null;
@@ -234,7 +235,8 @@
         if (now - lastTap.time < 300 && moved < 40) {
           lastTap.time = 0;
           var pt = containerPoint(t.clientX, t.clientY);
-          setZoom(zoom > 1.2 ? 1 : 2, pt.x, pt.y);
+          var natural = Math.max(1.5, Math.min(MAX_ZOOM, naturalPx / fitWidth));
+          setZoom(zoom > 1.2 ? 1 : natural, pt.x, pt.y);
           e.preventDefault();
         } else {
           lastTap = { time: now, x: t.clientX, y: t.clientY };
@@ -256,9 +258,17 @@
       pdfDoc = pdf;
       var pagePromises = [];
       for (var n = 1; n <= pdf.numPages; n++) pagePromises.push(pdf.getPage(n));
-      return Promise.all(pagePromises).then(computeCrop).then(function (c) {
-        crop = c;
-        renderDocument(measureFitWidth());
+      return Promise.all(pagePromises).then(function (pages) {
+        return computeCrop(pages).then(function (c) {
+          crop = c;
+          /* the document's natural on-screen size (96 dpi), like the native
+             viewer shows it: readable text, sideways scroll for line ends */
+          naturalPx = (c ? c.x1 - c.x0 : pages[0].getViewport({ scale: 1 }).width) * 96 / 72;
+        });
+      }).then(function () {
+        measureFitWidth();
+        zoom = Math.max(1, Math.min(MAX_ZOOM, naturalPx / fitWidth));
+        renderDocument(fitWidth * zoom);
         attachGestures();
         var resizeTimer = null;
         window.addEventListener('resize', function () {
