@@ -13,8 +13,8 @@
   var src = container.getAttribute('data-src');
   var MAX_ZOOM = 4;
   var MAX_CANVAS_PIXELS = 16000000; /* iOS Safari canvas limit */
-  var START_SCALE = 0.6; /* opening size as a fraction of the document's natural
-                            size — matches how the original iframe rendered it */
+  var START_SCALE = 0.65; /* opening size as a fraction of the document's natural
+                             size — matches how the original iframe rendered it */
 
   var zoomLayer = document.createElement('div');
   zoomLayer.className = 'cv-zoom';
