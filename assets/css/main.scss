@@ -154,19 +154,14 @@ h1, h2, h3, h4,
    ignores links. div.cv-embed is the script-swapped viewer; the desktop
    iframe.cv-embed is unaffected. */
 div.cv-embed {
-  height: auto;
-  max-height: 180vh;
+  /* same box as the iframe it replaces: width, height, border, and radius
+     come from .cv-embed, so it sits inside the page exactly like the
+     original — page background visible around it */
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x pan-y; /* pinch and double-tap go to the viewer, not the browser */
-  /* edge-to-edge on phones */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  border-left: 0;
-  border-right: 0;
-  border-radius: 0;
-  /* the paper floats on a grey surface, like a real PDF viewer */
-  background: #d5d8dc;
+  /* the paper floats on the dark grey surface of a real PDF viewer */
+  background: #525659;
 }
 div.cv-embed .cv-zoom { transform-origin: 0 0; padding: 12px; }
 div.cv-embed .cv-page {
