@@ -13,6 +13,7 @@
   var src = container.getAttribute('data-src');
   var MAX_ZOOM = 4;
   var MAX_CANVAS_PIXELS = 16000000; /* iOS Safari canvas limit */
+  var START_SCALE = 0.8; /* opening size as a fraction of the document's natural size */
 
   var zoomLayer = document.createElement('div');
   zoomLayer.className = 'cv-zoom';
@@ -235,7 +236,7 @@
         if (now - lastTap.time < 300 && moved < 40) {
           lastTap.time = 0;
           var pt = containerPoint(t.clientX, t.clientY);
-          var natural = Math.max(1.5, Math.min(MAX_ZOOM, naturalPx / fitWidth));
+          var natural = Math.max(1.5, Math.min(MAX_ZOOM, START_SCALE * naturalPx / fitWidth));
           setZoom(zoom > 1.2 ? 1 : natural, pt.x, pt.y);
           e.preventDefault();
         } else {
@@ -267,7 +268,7 @@
         });
       }).then(function () {
         measureFitWidth();
-        zoom = Math.max(1, Math.min(MAX_ZOOM, naturalPx / fitWidth));
+        zoom = Math.max(1, Math.min(MAX_ZOOM, START_SCALE * naturalPx / fitWidth));
         renderDocument(fitWidth * zoom);
         attachGestures();
         var resizeTimer = null;
