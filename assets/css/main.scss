@@ -150,67 +150,6 @@ h1, h2, h3, h4,
   background: #fff;
 }
 
-/* PDF.js-rendered CV on phones/tablets, where the native inline PDF preview
-   ignores links. div.cv-embed is the script-swapped viewer; the desktop
-   iframe.cv-embed is unaffected. */
-div.cv-embed {
-  /* same box as the iframe it replaces: width, height, border, radius, and
-     white background come from .cv-embed, so it sits inside the page exactly
-     like the original. The paper fills the box flush against its border —
-     no surface, no gap, no shadow around it. */
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-x pan-y; /* pinch and double-tap go to the viewer, not the browser */
-}
-div.cv-embed .cv-zoom { transform-origin: 0 0; }
-div.cv-embed .cv-page {
-  position: relative;
-  margin: 0 auto;
-  background: #fff;
-}
-div.cv-embed .cv-page + .cv-page { border-top: 1px solid #e8e8e8; }
-div.cv-embed canvas { display: block; }
-.cv-page__link { position: absolute; display: block; }
-
-.cv-shell { position: relative; }
-.cv-expand {
-  position: absolute;
-  top: 8px;
-  left: 8px; /* top-left corner of the paper is blank in the CV */
-  z-index: 5;
-  border: 0;
-  border-radius: 999px;
-  padding: 0.4em 0.75em;
-  font-family: "Inter", sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #fff;
-  background: rgba(31, 92, 147, 0.65);
-  cursor: pointer;
-}
-.cv-expand--full {
-  position: fixed;
-  top: 12px;
-  left: auto;
-  right: 12px;
-  z-index: 10001;
-  background: rgba(31, 92, 147, 0.92);
-}
-div.cv-embed--full {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  max-height: none;
-  margin: 0;
-  z-index: 10000;
-  border: 0;
-  border-radius: 0;
-}
-
 /* comfortable reading rhythm */
 .page__content { font-size: 1.03em; line-height: 1.72; }
 .page__content p { margin-bottom: 1.15em; }
