@@ -44,10 +44,10 @@ sitemap: false
     if (cb) { s.onload = cb; }
     document.body.appendChild(s);
   }
-  add('/assets/js/pdfjs/pdf.min.js?v=16', function () {
+  add('/assets/js/pdfjs/pdf.min.js?v=17', function () {
     if (!window.pdfjsLib) { restore(); return; }
-    window.pdfjsLib.GlobalWorkerOptions.workerSrc = '/assets/js/pdfjs/pdf.worker.min.js?v=16';
-    add('/assets/js/cv-viewer.js?v=16');
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc = '/assets/js/pdfjs/pdf.worker.min.js?v=17';
+    add('/assets/js/cv-viewer.js?v=17');
   });
 })();
 </script>
