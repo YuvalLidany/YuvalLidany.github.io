@@ -303,9 +303,11 @@ body,
 }
 
 /* --- day/night switch in the top bar --- */
-.greedy-nav .theme-toggle {
+.masthead__inner-wrap { position: relative; }
+.masthead .greedy-nav { margin-right: 4.5rem; }
+.masthead .theme-toggle {
   position: absolute;
-  right: 0;
+  right: 1em;
   top: 50%;
   transform: translateY(-50%);
   padding: 0;
@@ -314,7 +316,7 @@ body,
   cursor: pointer;
   z-index: 100;
 }
-.greedy-nav .theme-toggle .track {
+.masthead .theme-toggle .track {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -328,11 +330,11 @@ body,
   border: 1px solid rgba(31, 92, 147, 0.38);
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
-.greedy-nav .theme-toggle:hover .track { border-color: #1f5c93; }
-.greedy-nav .theme-toggle svg { vertical-align: middle; z-index: 1; }
-.greedy-nav .theme-toggle .sw-sun { color: #f4c542; }
-.greedy-nav .theme-toggle .sw-moon { color: #6a6d75; }
-.greedy-nav .theme-toggle .knob {
+.masthead .theme-toggle:hover .track { border-color: #1f5c93; }
+.masthead .theme-toggle svg { vertical-align: middle; z-index: 1; }
+.masthead .theme-toggle .sw-sun { color: #f4c542; }
+.masthead .theme-toggle .sw-moon { color: #6a6d75; }
+.masthead .theme-toggle .knob {
   position: absolute;
   top: 2px;
   left: 2px;
@@ -343,13 +345,11 @@ body,
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
-html[data-theme="dark"] .greedy-nav .theme-toggle .sw-moon { color: #33353c; }
-html[data-theme="dark"] .greedy-nav .theme-toggle .knob {
+html[data-theme="dark"] .masthead .theme-toggle .sw-moon { color: #33353c; }
+html[data-theme="dark"] .masthead .theme-toggle .knob {
   transform: translateX(26px);
 }
 
-/* keep the mobile hamburger clear of the switch */
-.greedy-nav > button:not(.theme-toggle) { right: 3.8rem; }
 
 /* --- night palette --- */
 html[data-theme="dark"] { color-scheme: dark; }
@@ -366,11 +366,11 @@ html[data-theme="dark"] .masthead {
 html[data-theme="dark"] .masthead .site-title { color: #ece9e2 !important; }
 html[data-theme="dark"] .greedy-nav a { color: #b3b1a9; }
 html[data-theme="dark"] .greedy-nav a:hover { color: #7db2e4; }
-html[data-theme="dark"] .greedy-nav .theme-toggle .track {
+html[data-theme="dark"] .masthead .theme-toggle .track {
   background: rgba(125, 178, 228, 0.14);
   border-color: rgba(125, 178, 228, 0.45);
 }
-html[data-theme="dark"] .greedy-nav .theme-toggle:hover .track { border-color: #7db2e4; }
+html[data-theme="dark"] .masthead .theme-toggle:hover .track { border-color: #7db2e4; }
 html[data-theme="dark"] .greedy-nav .hidden-links {
   background: #22242a;
   border: 1px solid rgba(255, 255, 255, 0.1);
