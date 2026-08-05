@@ -2,6 +2,18 @@
 
 <!-- start custom head snippets -->
 
+<!-- Day/night mode: apply saved (or OS-preferred) theme before first paint to avoid a flash -->
+<script>
+  (function () {
+    var theme;
+    try { theme = localStorage.getItem('theme'); } catch (e) {}
+    if (theme !== 'light' && theme !== 'dark') {
+      theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+
 <!-- Favicon: "YL" monogram (SVG) with .ico fallback -->
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 <link rel="alternate icon" type="image/x-icon" href="/images/favicon.ico">

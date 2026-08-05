@@ -287,3 +287,194 @@ a.pub__title:hover { color: #1f5c93 !important; text-decoration: underline; }
   color: #fff !important;
   border-color: #1f5c93;
 }
+
+
+/* ==========================================================================
+   Day / night mode
+   ========================================================================== */
+
+/* smooth the switch */
+body,
+.masthead,
+.page__footer,
+.pub,
+.hidden-links {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* --- day/night switch in the top bar --- */
+.greedy-nav .theme-toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 100;
+}
+.greedy-nav .theme-toggle .track {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 52px;
+  height: 26px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: rgba(31, 92, 147, 0.12);
+  border: 1px solid rgba(31, 92, 147, 0.38);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.greedy-nav .theme-toggle:hover .track { border-color: #1f5c93; }
+.greedy-nav .theme-toggle svg { vertical-align: middle; z-index: 1; }
+.greedy-nav .theme-toggle .sw-sun { color: #f4c542; }
+.greedy-nav .theme-toggle .sw-moon { color: #6a6d75; }
+.greedy-nav .theme-toggle .knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+html[data-theme="dark"] .greedy-nav .theme-toggle .sw-moon { color: #33353c; }
+html[data-theme="dark"] .greedy-nav .theme-toggle .knob {
+  transform: translateX(26px);
+}
+
+/* keep the mobile hamburger clear of the switch */
+.greedy-nav > button:not(.theme-toggle) { right: 3.8rem; }
+
+/* --- night palette --- */
+html[data-theme="dark"] { color-scheme: dark; }
+
+html[data-theme="dark"] body {
+  background-color: #17181c;
+  color: #cfcdc6;
+}
+
+html[data-theme="dark"] .masthead {
+  background: #17181c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+html[data-theme="dark"] .masthead .site-title { color: #ece9e2 !important; }
+html[data-theme="dark"] .greedy-nav a { color: #b3b1a9; }
+html[data-theme="dark"] .greedy-nav a:hover { color: #7db2e4; }
+html[data-theme="dark"] .greedy-nav .theme-toggle .track {
+  background: rgba(125, 178, 228, 0.14);
+  border-color: rgba(125, 178, 228, 0.45);
+}
+html[data-theme="dark"] .greedy-nav .theme-toggle:hover .track { border-color: #7db2e4; }
+html[data-theme="dark"] .greedy-nav .hidden-links {
+  background: #22242a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+html[data-theme="dark"] .greedy-nav .hidden-links a { color: #b3b1a9; }
+html[data-theme="dark"] .greedy-nav .hidden-links::before { border-color: transparent transparent #22242a transparent; }
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] .page__title,
+html[data-theme="dark"] .archive__item-title,
+html[data-theme="dark"] .author__name { color: #ece9e2; }
+
+html[data-theme="dark"] .page__content h1,
+html[data-theme="dark"] .page__content h2 { border-bottom-color: rgba(125, 178, 228, 0.3); }
+
+html[data-theme="dark"] .page__content a,
+html[data-theme="dark"] .page__content a[style] { color: #7db2e4 !important; }
+html[data-theme="dark"] .page__content a:hover,
+html[data-theme="dark"] .page__content a[style]:hover { color: #a3c9ef !important; }
+
+/* sidebar / author profile */
+html[data-theme="dark"] .author__avatar img {
+  border-color: #24262c;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
+}
+html[data-theme="dark"] .author__urls li,
+html[data-theme="dark"] .author__urls a,
+html[data-theme="dark"] .author__bio,
+html[data-theme="dark"] .author__pronouns { color: #b3b1a9; }
+html[data-theme="dark"] .author__urls a:hover { color: #7db2e4; }
+html[data-theme="dark"] .author__urls.social-icons .fa,
+html[data-theme="dark"] .author__urls.social-icons .fas,
+html[data-theme="dark"] .author__urls.social-icons .fab,
+html[data-theme="dark"] .author__urls.social-icons .ai { color: #b3b1a9; }
+html[data-theme="dark"] .author__urls-wrapper button.btn--inverse {
+  background: #22242a;
+  color: #cfcdc6;
+}
+html[data-theme="dark"] .author__urls::before { border-color: transparent transparent rgba(255, 255, 255, 0.1) transparent; }
+html[data-theme="dark"] .author__urls::after { border-color: transparent transparent #22242a transparent; }
+
+/* homepage link buttons */
+html[data-theme="dark"] .home-links a {
+  color: #7db2e4 !important;
+  border-color: rgba(125, 178, 228, 0.45);
+}
+html[data-theme="dark"] .home-links a:hover {
+  background: #7db2e4;
+  color: #17181c !important;
+  border-color: #7db2e4;
+}
+
+/* publication cards */
+html[data-theme="dark"] .pubs__section-title {
+  color: #ece9e2;
+  border-bottom-color: rgba(125, 178, 228, 0.3);
+}
+html[data-theme="dark"] .pub {
+  border-left-color: #5d94c9;
+  background: rgba(125, 178, 228, 0.07);
+}
+html[data-theme="dark"] .pub__badge {
+  color: #a3c9ef;
+  background: rgba(125, 178, 228, 0.16);
+}
+html[data-theme="dark"] .pub__title { color: #ece9e2 !important; }
+html[data-theme="dark"] a.pub__title:hover { color: #7db2e4 !important; }
+html[data-theme="dark"] .pub__meta { color: #96988f; }
+html[data-theme="dark"] .pub__links a {
+  border-color: rgba(125, 178, 228, 0.45);
+  color: #7db2e4 !important;
+}
+html[data-theme="dark"] .pub__links a:hover {
+  background: #7db2e4;
+  color: #17181c !important;
+}
+html[data-theme="dark"] .pub__abstract > summary { color: #7db2e4; }
+html[data-theme="dark"] .pub__abstract p { color: #b3b1a9; }
+
+/* footer */
+html[data-theme="dark"] .page__footer {
+  background-color: #121317;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #96988f;
+}
+html[data-theme="dark"] .page__footer a,
+html[data-theme="dark"] .page__footer .page__footer-copyright { color: #96988f !important; }
+html[data-theme="dark"] .page__footer a:hover { color: #7db2e4 !important; }
+
+/* CV page */
+html[data-theme="dark"] .cv-download { background: #2b6cab; }
+html[data-theme="dark"] .cv-download:hover { background: #3b7cbb; }
+html[data-theme="dark"] .cv-embed {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: #22242a;
+}
+
+/* generic content elements */
+html[data-theme="dark"] blockquote { color: #b3b1a9; border-left-color: #5d94c9; }
+html[data-theme="dark"] hr { border-color: rgba(255, 255, 255, 0.12); }
+html[data-theme="dark"] table th,
+html[data-theme="dark"] table td { border-color: rgba(255, 255, 255, 0.12); }
+html[data-theme="dark"] code,
+html[data-theme="dark"] pre { background: #22242a; color: #cfcdc6; }
