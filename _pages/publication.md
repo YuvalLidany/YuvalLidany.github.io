@@ -7,7 +7,14 @@ redirect_from:
 author_profile: true
 ---
 
-<div class="pubs__section-title">Working Papers</div>
+<nav class="pubs-nav">
+  <a href="#working-papers">Working papers</a>
+  <a href="#published">Published</a>
+  <a href="#in-progress">In progress</a>
+  <a href="#policy">Policy</a>
+</nav>
+
+<div class="pubs__section-title" id="working-papers">Working Papers</div>
 
 <div class="pub">
   <a class="pub__title" href="https://YuvalLidany.github.io/files/Lidany_CROSS-PRODUCT_COMPATIBILITY.pdf" target="_blank">&ldquo;Cross-Product Compatibility, Lock-In, and Market Power: The Case of Smartphones and Laptops&rdquo;</a>
@@ -21,14 +28,7 @@ author_profile: true
   </details>
 </div>
 
-<div class="pub">
-  <span class="pub__title">&ldquo;Closed Ecosystems and Firms&rsquo; Investments.&rdquo;</span>
-</div>
-
-<div class="pub">
-  <span class="pub__title">&ldquo;The Effect of Closed Ecosystems on Consumers&rsquo; Consideration Sets&rdquo;</span>
-  <div class="pub__meta">with Lucas Coffman</div>
-</div>
+<div class="pubs__section-title" id="published">Published &amp; Forthcoming</div>
 
 <div class="pub">
   <span class="pub__title">&ldquo;AI as a GPT: Implications for Competition&rdquo;</span>
@@ -42,7 +42,18 @@ author_profile: true
   </details>
 </div>
 
-<div class="pubs__section-title">Policy Papers</div>
+<div class="pubs__section-title" id="in-progress">In Progress</div>
+
+<div class="pub">
+  <span class="pub__title">&ldquo;Closed Ecosystems and Firms&rsquo; Investments&rdquo;</span>
+</div>
+
+<div class="pub">
+  <span class="pub__title">&ldquo;The Effect of Closed Ecosystems on Consumers&rsquo; Consideration Sets&rdquo;</span>
+  <div class="pub__meta">with Lucas Coffman</div>
+</div>
+
+<div class="pubs__section-title" id="policy">Policy Papers</div>
 
 <div class="pub">
   <span class="pub__title">&ldquo;Measuring Willingness to Pay for Compatibility Between Smartphones and Laptops&rdquo;</span>

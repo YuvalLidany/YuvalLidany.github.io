@@ -177,6 +177,30 @@ h1, h2, h3, h4,
 }
 .pubs__section-title:first-of-type { margin-top: 0.5em; }
 
+/* section jump pills on the Research page */
+html { scroll-behavior: smooth; }
+.pubs__section-title { scroll-margin-top: 1em; }
+.pubs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55em;
+  margin: 0.2em 0 1.8em;
+  font-family: "Inter", sans-serif;
+}
+.pubs-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4em 1.05em;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #1f5c93 !important;
+  background: rgba(31, 92, 147, 0.055);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.pubs-nav a:hover { background: #1f5c93; color: #ffffff !important; }
+
 /* every paper sits in the same subtle card */
 .pub {
   margin: 0 0 1.1em;
@@ -451,6 +475,14 @@ html[data-theme="dark"] .pub__links a:hover {
   color: #17181c !important;
 }
 html[data-theme="dark"] .pub__abstract > summary { color: #7db2e4; }
+html[data-theme="dark"] .pubs-nav a {
+  color: #7db2e4 !important;
+  background: rgba(125, 178, 228, 0.07);
+}
+html[data-theme="dark"] .pubs-nav a:hover {
+  background: #7db2e4;
+  color: #17181c !important;
+}
 html[data-theme="dark"] .pub__abstract p { color: #b3b1a9; }
 
 /* footer */
