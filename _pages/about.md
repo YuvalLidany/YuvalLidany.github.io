@@ -25,4 +25,4 @@ I completed my Ph.D. in Economics at <a href="https://www.bc.edu/bc-web/schools/
   <div class="pub__meta"><span class="pub__status">Under Review</span></div>
 </div>
 
-<a class="home-more" href="/publications/">See all research &rarr;</a>
+<a class="home-more" href="/research/">See all research &rarr;</a>
