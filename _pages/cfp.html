@@ -1,0 +1,346 @@
+---
+layout: null
+permalink: /cfp/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IO &amp; Digital Economics — CFP Tracker 2026–27</title>
+<meta name="description" content="Conference deadlines and calls for papers in industrial organization, digital economics, platforms, economics of AI, and antitrust — 2026–27 cycle.">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<script>
+  (function () {
+    var theme;
+    try { theme = localStorage.getItem('theme'); } catch (e) {}
+    if (theme !== 'light' && theme !== 'dark') { theme = 'light'; }
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+<style>
+  :root {
+    --paper: #f7f8f5;
+    --card: #ffffff;
+    --ink: #1d2430;
+    --muted: #5a6472;
+    --line: #dde1da;
+    --accent: #2b4a73;
+    --accent-soft: #e8edf4;
+    --open: #1e7b4f;
+    --open-soft: #e3f1e9;
+    --soon: #9a5b0f;
+    --soon-soft: #f6ecdb;
+    --closed: #6a7280;
+    --closed-soft: #ebedef;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #171b21;
+      --card: #1f242c;
+      --ink: #e8e9e6;
+      --muted: #9aa3ae;
+      --line: #333a44;
+      --accent: #8fb0d6;
+      --accent-soft: #253243;
+      --open: #6cc296;
+      --open-soft: #1f3529;
+      --soon: #ddab5f;
+      --soon-soft: #3a2f1c;
+      --closed: #939ba6;
+      --closed-soft: #2a2f37;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #171b21; --card: #1f242c; --ink: #e8e9e6; --muted: #9aa3ae; --line: #333a44;
+    --accent: #8fb0d6; --accent-soft: #253243; --open: #6cc296; --open-soft: #1f3529;
+    --soon: #ddab5f; --soon-soft: #3a2f1c; --closed: #939ba6; --closed-soft: #2a2f37;
+  }
+  :root[data-theme="light"] {
+    --paper: #f7f8f5; --card: #ffffff; --ink: #1d2430; --muted: #5a6472; --line: #dde1da;
+    --accent: #2b4a73; --accent-soft: #e8edf4; --open: #1e7b4f; --open-soft: #e3f1e9;
+    --soon: #9a5b0f; --soon-soft: #f6ecdb; --closed: #6a7280; --closed-soft: #ebedef;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  .wrap { max-width: 1150px; margin: 0 auto; }
+  header.masthead { border-bottom: 3px double var(--line); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+  .eyebrow {
+    font-family: var(--mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 .6rem;
+  }
+  h1 {
+    font-family: var(--serif); font-size: clamp(1.8rem, 4.5vw, 2.6rem); font-weight: 600;
+    line-height: 1.15; margin: 0 0 .7rem; text-wrap: balance;
+  }
+  .standfirst { color: var(--muted); max-width: 62ch; margin: 0; font-size: .95rem; }
+  .standfirst strong { color: var(--ink); }
+  section { margin-bottom: 2.75rem; }
+  h2 {
+    font-family: var(--serif); font-size: 1.35rem; font-weight: 600; margin: 0 0 .25rem;
+    display: flex; align-items: baseline; gap: .6rem; text-wrap: balance;
+  }
+  .count { font-family: var(--mono); font-size: .78rem; color: var(--muted); font-weight: 400; }
+  .section-note { color: var(--muted); font-size: .88rem; margin: 0 0 1rem; max-width: 70ch; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .9rem; }
+  th {
+    text-align: left; font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--muted); font-weight: 500;
+    padding: .65rem .85rem; border-bottom: 1px solid var(--line);
+  }
+  td { padding: .7rem .85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  td.conf { font-weight: 600; min-width: 13rem; }
+  td.conf .org { display: block; font-weight: 400; color: var(--muted); font-size: .8rem; margin-top: .1rem; }
+  td.when { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 9rem; }
+  td.when .place { display: block; font-size: .82rem; }
+  .pill {
+    display: inline-block; font-family: var(--mono); font-size: .72rem; font-weight: 600;
+    padding: .18rem .55rem; border-radius: 999px; white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .pill.open { background: var(--open-soft); color: var(--open); }
+  .pill.soon { background: var(--soon-soft); color: var(--soon); }
+  .pill.closed { background: var(--closed-soft); color: var(--closed); }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  .deadline { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .loop { background: var(--accent-soft); border-radius: 6px; padding: 1.1rem 1.3rem; }
+  .loop h2 { margin-bottom: .5rem; }
+  .loop ul { margin: 0; padding-left: 1.1rem; font-size: .9rem; }
+  .loop li { margin-bottom: .3rem; }
+  footer {
+    border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem;
+    color: var(--muted); font-size: .82rem; max-width: 70ch;
+  }
+</style>
+<script data-goatcounter="https://yuvallidany.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow"><a href="/" style="text-decoration:none;">&larr; yuvallidany.github.io</a> &nbsp;·&nbsp; Community resource · updated August 6, 2026</p>
+    <h1>IO &amp; Digital Economics<br>Conferences &amp; Calls for Papers, 2026–27</h1>
+    <p class="standfirst">One page for planning your submission pipeline: industrial organization, digital economics, platforms, economics of AI, antitrust, and quantitative marketing. Deadlines checked against official conference pages where available — <strong>always verify before submitting</strong>. Spotted an error or a missing venue? Tell me and I'll update it.</p>
+  </header>
+
+  <section>
+    <h2>Open now — submit before it's too late <span class="count">5 calls</span></h2>
+    <p class="section-note">Calls for papers currently open, ordered by deadline. Expired calls are removed as their deadlines pass.</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Conference</th><th>Dates · Location</th><th>Deadline</th><th>Link</th></tr>
+        <tr>
+          <td class="conf">WISE 2026<span class="org">Workshop on Information Systems and Economics</span></td>
+          <td class="when">Dec 16–18, 2026<span class="place">Lisbon, Portugal</span></td>
+          <td><span class="pill soon">Aug 23, 2026</span></td>
+          <td><a href="https://wiseconf2026.github.io/">Conference site</a></td>
+        </tr>
+        <tr>
+          <td class="conf">19th Digital Economics Conference<span class="org">TSE Digital Center · CEPR</span></td>
+          <td class="when">Jan 7–8, 2027<span class="place">Toulouse, France</span></td>
+          <td><span class="pill soon">Sep 1, 2026</span></td>
+          <td><a href="https://www.tse-fr.eu/conferences/2027-19th-digital-economics-conference">Conference page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">CODE@MIT 2026<span class="org">Conference on Digital Experimentation, MIT IDE</span></td>
+          <td class="when">Nov 13–14, 2026<span class="place">Cambridge, MA</span></td>
+          <td><span class="pill open">Sep 13, 2026</span></td>
+          <td><a href="https://ide.mit.edu/events/2026-conference-on-digital-experimentation-mit-codemit/">2026 event page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">Production Function Estimation and Its Applications to Industries<span class="org">NBER</span></td>
+          <td class="when">Dec 5, 2026<span class="place">Cambridge, MA</span></td>
+          <td><span class="pill open">Sep 14, 2026</span></td>
+          <td><a href="https://www.nber.org/calls-papers-and-proposals/production-function-estimation-and-its-applications-industries">Call for papers</a></td>
+        </tr>
+        <tr>
+          <td class="conf">CESifo-TransforM Workshop on the Economic and Societal Impacts of AI<span class="org">ifo / CESifo</span></td>
+          <td class="when">~Dec 2026 (est.)<span class="place">Munich, Germany</span></td>
+          <td><span class="pill open">Sep 15, 2026</span></td>
+          <td><a href="https://www.ifo.de/en/cesifo/event/2025-12-05/cesifo-transform-workshop-economic-and-societal-impacts-ai">2025 edition page (2026 CFP live on ifo calls-papers hub)</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>On the horizon — calls expected within the cycle <span class="count">18 venues</span></h2>
+    <p class="section-note">Timing estimated from the previous cycle where noted (~); watch the official page for the call to open.</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Conference</th><th>Expected dates · Location</th><th>Typical CFP timing</th><th>Link</th></tr>
+        <tr>
+          <td class="conf">IIOC 2027 (25th)<span class="org">Industrial Organization Society</span></td>
+          <td class="when">Apr 30–May 2, 2027<span class="place">Baltimore, MD</span></td>
+          <td><span class="pill soon">CFP out ~Dec 2026</span></td>
+          <td><a href="https://www.indorgsociety.org/conference">IIOC page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">MaCCI Annual Conference 2027<span class="org">ZEW · U. Mannheim</span></td>
+          <td class="when">Mar 11–12, 2027<span class="place">Mannheim, Germany</span></td>
+          <td><span class="pill soon">CFP ~fall, due ~Nov–Dec</span></td>
+          <td><a href="https://www.macci-mannheim.eu/events/macci-annual-conference">Annual conference page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">Utah Winter Business Economics Conference<span class="org">Marriner S. Eccles Institute</span></td>
+          <td class="when">Feb 25–27, 2027<span class="place">Snowbird, UT</span></td>
+          <td><span class="pill soon">~Fall 2026</span></td>
+          <td><a href="https://marriner.eccles.utah.edu/utah-winter-economics-conference/">Conference page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">FTC Microeconomics Conference (19th)<span class="org">FTC Bureau of Economics (18th: Feb 24–25, 2026, w/ Yale Tobin Center)</span></td>
+          <td class="when">Dates TBA<span class="place">Washington, DC (expected)</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://www.ftc.gov/about-ftc/bureaus-offices/bureau-economics/conferences-seminars/conferences-roundtables">FTC events list (19th TBA)</a></td>
+        </tr>
+        <tr>
+          <td class="conf">Paris Conference on Digital Economics 2027<span class="org">IP Paris / Telecom Paris (2026 ed. was Apr 9–10, Palaiseau)</span></td>
+          <td class="when">~April 2027<span class="place">Palaiseau, France</span></td>
+          <td><span class="pill closed">Due ~early Jan (est.)</span></td>
+          <td><a href="https://www.digitaleconomics-paris.fr/">Conference site</a></td>
+        </tr>
+        <tr>
+          <td class="conf">ACM EC'27<span class="org">Economics and Computation (EC'26: Rome, Jul 6–10, 2026)</span></td>
+          <td class="when">Dates TBA<span class="place">TBA</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://ec26.sigecom.org/">EC'26 site (EC'27 TBA)</a></td>
+        </tr>
+        <tr>
+          <td class="conf">Munich Summer Institute 2027 (11th)<span class="org">MPI for Innovation &amp; Competition + partners (10th ed. was May 20–22, 2026)</span></td>
+          <td class="when">Dates TBA<span class="place">Munich, Germany</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://www.munich-summer-institute.org/">Conference site</a></td>
+        </tr>
+        <tr>
+          <td class="conf">ZEW Economics of ICT (25th)<span class="org">ZEW Mannheim (24th ed. was Jun 25–26, 2026, deadline Feb 25, 2026)</span></td>
+          <td class="when">Dates TBA<span class="place">Mannheim, Germany</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://www.zew.de/en/events-and-professional-training/detail/24th-zew-conference-on-the-economics-of-information-and-communication-technologies/4711">24th edition (2026) page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">SICS 2027 (25th)<span class="org">Summer Institute in Competitive Strategy, UC Berkeley Haas (24th ed. was Jul 6–10, 2026, deadline Feb 28, 2026)</span></td>
+          <td class="when">Dates TBA<span class="place">Berkeley, CA</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://sics.haas.berkeley.edu/callforpapers.html">Call for papers</a></td>
+        </tr>
+        <tr>
+          <td class="conf">NBER Summer Institute 2027<span class="org">IO · Digital Economics &amp; AI sessions (2026 ed. was Jul 13–31, deadline Mar 26, 2026)</span></td>
+          <td class="when">July 2027 (est.)<span class="place">Cambridge, MA</span></td>
+          <td><span class="pill closed">CFP ~late 2026, due ~late Mar 2027 (est.)</span></td>
+          <td><a href="https://www.nber.org/summer-institute">Summer Institute page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">EARIE 2027 (54th)<span class="org">European Assoc. for Research in Industrial Economics</span></td>
+          <td class="when">Aug/Sep 2027 (est.)<span class="place">Venue TBA</span></td>
+          <td><span class="pill closed">Window ~Feb–Mar 2027 (est.)</span></td>
+          <td><a href="https://earie.org/">EARIE site (2027 TBA)</a></td>
+        </tr>
+        <tr>
+          <td class="conf">CRESSE 2027 (21st)<span class="org">Competition &amp; Regulation Summer School and Conference</span></td>
+          <td class="when">Jul 2–4, 2027<span class="place">Chania, Crete, Greece</span></td>
+          <td><span class="pill closed">Due ~spring 2027 (est.)</span></td>
+          <td><a href="https://www.cresse.info/announcement-cresse-2027/">2027 announcement</a></td>
+        </tr>
+        <tr>
+          <td class="conf">QME Conference 2027<span class="org">Quantitative Marketing &amp; Economics (24th ed. was Aug 27–28, 2026, deadline May 15, 2026)</span></td>
+          <td class="when">~Fall 2027 (est.)<span class="place">Host TBA</span></td>
+          <td><span class="pill closed">Due ~mid-May (est.)</span></td>
+          <td><a href="https://www.chicagobooth.edu/research/kilts/events/qme-conference">QME conference page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">Platform Strategy Research Symposium 2027<span class="org">BU Questrom (2026 ed. was Jul 27–28, Boston)</span></td>
+          <td class="when">Dates TBA<span class="place">Boston, MA (expected)</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://questromworld.bu.edu/platformstrategy/">Symposium site</a></td>
+        </tr>
+        <tr>
+          <td class="conf">Marketplace Innovation Workshop<span class="org">Recent editions fully virtual (11th ed. was May 18–20, 2026)</span></td>
+          <td class="when">Dates TBA<span class="place">Virtual</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="http://marketplaceinnovation.net">Workshop site</a></td>
+        </tr>
+        <tr>
+          <td class="conf">Doctoral Workshop on the Economics of Digitization (10th)<span class="org">ifo / CESifo</span></td>
+          <td class="when">Dates TBA<span class="place">TBA</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://www.ifo.de/en/cesifo/event/2026-06-15/9th-doctoral-workshop-economics-digitization">9th edition (2026) page</a></td>
+        </tr>
+        <tr>
+          <td class="conf">CEPR-JIE Conference on Applied Industrial Organization (27th)<span class="org">CEPR · Journal of Industrial Economics (26th ed. was May 28–30, 2026, Rome, w/ "AI, Algorithms and Markets" symposium)</span></td>
+          <td class="when">Dates TBA<span class="place">TBA</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://cepr.org/events/26th-cepr-jie-conference-applied-industrial-organization">26th edition (2026) page — 27th TBA</a></td>
+        </tr>
+        <tr>
+          <td class="conf">Hal White Antitrust Conference (2027)<span class="org">Bates White Economic Consulting (23rd ed. was Jun 1–2, 2026, DC)</span></td>
+          <td class="when">Dates TBA<span class="place">Washington, DC (expected)</span></td>
+          <td><span class="pill closed">Not yet announced</span></td>
+          <td><a href="https://www.bateswhite.com/newsroom/events/call-for-papers-2026-hal-white-antitrust-conference">2026 CFP page — 2027 TBA</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Coming up — CFP closed, worth attending <span class="count">5 events</span></h2>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Conference</th><th>Dates · Location</th><th>Notes</th></tr>
+        <tr>
+          <td class="conf"><a href="https://earie.org/intro-earie-2026/">EARIE 2026 (53rd)</a><span class="org">U. Mannheim · ZEW</span></td>
+          <td class="when">Aug 26–28, 2026<span class="place">Mannheim, Germany</span></td>
+          <td>Deadline was Mar 15, 2026</td>
+        </tr>
+        <tr>
+          <td class="conf"><a href="https://www.chicagobooth.edu/research/kilts/events/qme-conference/annual-conference">QME 2026 (24th)</a><span class="org">WashU Olin · Chicago Booth Kilts</span></td>
+          <td class="when">Aug 27–28, 2026<span class="place">St. Louis, MO</span></td>
+          <td>Deadline was May 15, 2026 · virtual option offered</td>
+        </tr>
+        <tr>
+          <td class="conf"><a href="https://www.law.northwestern.edu/research-faculty/clbe/events/antitrust/">Northwestern Conference on Antitrust Economics &amp; Competition Policy (18th)</a><span class="org">Northwestern Law CLBE</span></td>
+          <td class="when">Sep 18–19, 2026<span class="place">Chicago, IL</span></td>
+          <td>Deadline was May 15, 2026</td>
+        </tr>
+        <tr>
+          <td class="conf"><a href="https://www.nber.org/conferences/economics-artificial-intelligence-fall-2026">Economics of Artificial Intelligence</a><span class="org">NBER</span></td>
+          <td class="when">Sep 23–24, 2026<span class="place">Toronto, Canada</span></td>
+          <td>Organizers: Agrawal, Gans, Goldfarb, Tucker</td>
+        </tr>
+        <tr>
+          <td class="conf"><a href="https://www.aeaweb.org/conference/">ASSA 2027</a><span class="org">AEA / Allied Social Science Associations</span></td>
+          <td class="when">Jan 3–5, 2027<span class="place">Washington, DC</span></td>
+          <td>Closed Apr 1, 2026 (papers) / Apr 15, 2026 (sessions) · ASSA 2028 (Atlanta, Jan 7–9) CFP expected ~Feb 2027 (est.)</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="loop">
+    <h2>Staying in the loop</h2>
+    <ul>
+      <li><a href="https://www.indorgsociety.org/">IOS Listserv</a> — all IIOC announcements</li>
+      <li><a href="https://www.nber.org/calls-papers-and-proposals">NBER open calls</a> — every active NBER call in one place</li>
+      <li><a href="https://cepr.org/events">CEPR events</a> — including the Digital Economics and Applied IO series</li>
+      <li><a href="https://www.zew.de/en">ZEW</a> &amp; <a href="https://www.macci-mannheim.eu/">MaCCI</a> newsletters — EARIE, ICT, MaCCI calls</li>
+      <li><a href="https://www.ifo.de/en/cesifo/calls-papers">CESifo calls for papers</a> — digitization, AI-impacts, and area-conference workshops</li>
+    </ul>
+  </section>
+
+  <footer>
+    Compiled from official conference websites; last updated August 6, 2026 (expired calls removed as deadlines pass). Estimated timings are inferred from the previous cycle and marked with "~" or "est."; never treated as confirmed. This list is a community resource maintained by <a href="/">Yuval Lidany</a> — corrections and additions are very welcome (<a href="mailto:ylidany@hbs.edu">email me</a>).
+  </footer>
+</div>
+</body>
+</html>

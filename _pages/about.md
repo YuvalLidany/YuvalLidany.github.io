@@ -26,3 +26,10 @@ I completed my Ph.D. in Economics at <a href="https://www.bc.edu/bc-web/schools/
 </div>
 
 <a class="home-more" href="/research/">See all research &rarr;</a>
+
+<h2>Resources</h2>
+
+<div class="home-feature pub">
+  <a class="pub__title" href="/cfp/">IO &amp; Digital Economics &mdash; Conferences &amp; CFP Tracker</a>
+  <div class="pub__meta">Deadlines and calls for papers for the 2026&ndash;27 cycle &nbsp;&middot;&nbsp; updated regularly</div>
+</div>
