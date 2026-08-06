@@ -7,9 +7,12 @@ permalink: /cfp/
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IO &amp; Digital Economics — CFP Tracker 2026–27</title>
-<meta name="description" content="Conference deadlines and calls for papers in industrial organization, digital economics, platforms, economics of AI, and antitrust — 2026–27 cycle.">
+<title>Conferences &amp; Calls for Papers — Yuval Lidany</title>
+<meta name="description" content="Conference deadlines and calls for papers in industrial organization, digital economics, platforms, economics of AI, and antitrust — 2026–27 cycle. Maintained by Yuval Lidany.">
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <script>
   (function () {
     var theme;
@@ -20,125 +23,129 @@ permalink: /cfp/
 </script>
 <style>
   :root {
-    --paper: #f7f8f5;
-    --card: #ffffff;
-    --ink: #1d2430;
-    --muted: #5a6472;
-    --line: #dde1da;
-    --accent: #2b4a73;
-    --accent-soft: #e8edf4;
-    --open: #1e7b4f;
-    --open-soft: #e3f1e9;
-    --soon: #9a5b0f;
-    --soon-soft: #f6ecdb;
-    --closed: #6a7280;
-    --closed-soft: #ebedef;
-    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    --bg: #f6f4ef; --ink: #201f1c; --text: #45473f; --muted: #5f6258;
+    --accent: #1f5c93; --accent-soft: rgba(31,92,147,0.055); --line: rgba(0,0,0,0.09);
+    --h2-rule: rgba(31,92,147,0.22);
+    --open: #1e7b4f; --open-soft: #e3f1e9; --soon: #9a5b0f; --soon-soft: #f6ecdb;
+    --closed: #6a7280; --closed-soft: #ebedef;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper: #171b21;
-      --card: #1f242c;
-      --ink: #e8e9e6;
-      --muted: #9aa3ae;
-      --line: #333a44;
-      --accent: #8fb0d6;
-      --accent-soft: #253243;
-      --open: #6cc296;
-      --open-soft: #1f3529;
-      --soon: #ddab5f;
-      --soon-soft: #3a2f1c;
-      --closed: #939ba6;
-      --closed-soft: #2a2f37;
-    }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #17181c; --ink: #ece9e2; --text: #b3b1a9; --muted: #96988f;
+    --accent: #7db2e4; --accent-soft: rgba(125,178,228,0.07); --line: rgba(255,255,255,0.1);
+    --h2-rule: rgba(125,178,228,0.3);
+    --open: #6cc296; --open-soft: #1f3529; --soon: #ddab5f; --soon-soft: #3a2f1c;
+    --closed: #939ba6; --closed-soft: #2a2f37;
   }
-  :root[data-theme="dark"] {
-    --paper: #171b21; --card: #1f242c; --ink: #e8e9e6; --muted: #9aa3ae; --line: #333a44;
-    --accent: #8fb0d6; --accent-soft: #253243; --open: #6cc296; --open-soft: #1f3529;
-    --soon: #ddab5f; --soon-soft: #3a2f1c; --closed: #939ba6; --closed-soft: #2a2f37;
-  }
-  :root[data-theme="light"] {
-    --paper: #f7f8f5; --card: #ffffff; --ink: #1d2430; --muted: #5a6472; --line: #dde1da;
-    --accent: #2b4a73; --accent-soft: #e8edf4; --open: #1e7b4f; --open-soft: #e3f1e9;
-    --soon: #9a5b0f; --soon-soft: #f6ecdb; --closed: #6a7280; --closed-soft: #ebedef;
-  }
+  * { box-sizing: border-box; }
   body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--sans);
-    line-height: 1.55;
-    margin: 0;
-    padding: 2.5rem 1.25rem 4rem;
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Inter", -apple-system, "Segoe UI", Arial, sans-serif;
+    font-size: 15px; line-height: 1.6;
+    transition: background-color .2s ease, color .2s ease;
+    -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 1150px; margin: 0 auto; }
-  header.masthead { border-bottom: 3px double var(--line); padding-bottom: 1.5rem; margin-bottom: 2rem; }
-  .eyebrow {
-    font-family: var(--mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
-    color: var(--accent); margin: 0 0 .6rem;
+  .masthead { border-bottom: 1px solid var(--line); }
+  .masthead-inner {
+    max-width: 1150px; margin: 0 auto; padding: 0 1em; display: flex; align-items: center;
+    min-height: 56px; position: relative;
   }
+  .site-title { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.15em; color: var(--ink); text-decoration: none; margin-right: 1.6em; }
+  .nav-links { display: flex; gap: 1.8rem; }
+  .nav-links a { color: var(--text); text-decoration: none; font-size: .95em; padding: .5rem 0; }
+  .nav-links a:hover { color: var(--accent); }
+  .theme-toggle { position: absolute; right: 1em; top: 50%; transform: translateY(-50%); padding: 0; border: 0; background: transparent; cursor: pointer; }
+  .theme-toggle .track {
+    position: relative; display: inline-flex; align-items: center; justify-content: space-between;
+    width: 52px; height: 26px; padding: 0 6px; border-radius: 999px;
+    background: var(--accent-soft); border: 1px solid var(--line);
+    transition: border-color .15s ease;
+  }
+  .theme-toggle:hover .track { border-color: var(--accent); }
+  .theme-toggle svg { z-index: 1; vertical-align: middle; }
+  .sw-sun { color: #f4c542; }
+  .sw-moon { color: #6a6d75; }
+  html[data-theme="dark"] .sw-moon { color: #33353c; }
+  .knob {
+    position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%;
+    background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.25); transition: transform .2s ease;
+  }
+  html[data-theme="dark"] .knob { transform: translateX(26px); }
+
+  .wrap { max-width: 1150px; margin: 0 auto; padding: 2em 1em 3em; }
   h1 {
-    font-family: var(--serif); font-size: clamp(1.8rem, 4.5vw, 2.6rem); font-weight: 600;
-    line-height: 1.15; margin: 0 0 .7rem; text-wrap: balance;
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif; letter-spacing: -.005em;
+    color: var(--ink); font-size: 1.9em; margin: 0 0 .3em; line-height: 1.2;
   }
-  .standfirst { color: var(--muted); max-width: 62ch; margin: 0; font-size: .95rem; }
-  .standfirst strong { color: var(--ink); }
-  section { margin-bottom: 2.75rem; }
+  .standfirst { color: var(--muted); max-width: 68ch; margin: 0 0 1.6em; font-size: .95em; }
   h2 {
-    font-family: var(--serif); font-size: 1.35rem; font-weight: 600; margin: 0 0 .25rem;
-    display: flex; align-items: baseline; gap: .6rem; text-wrap: balance;
+    font-family: "Source Serif 4", Georgia, serif; font-size: 1.45em; font-weight: 700; color: var(--ink);
+    margin: 1.9em 0 .5em; padding-bottom: .2em; border-bottom: 2px solid var(--h2-rule);
+    display: flex; align-items: baseline; gap: .6em;
   }
-  .count { font-family: var(--mono); font-size: .78rem; color: var(--muted); font-weight: 400; }
-  .section-note { color: var(--muted); font-size: .88rem; margin: 0 0 1rem; max-width: 70ch; }
-  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--card); }
-  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .9rem; }
+  .count { font-size: .6em; color: var(--muted); font-weight: 400; font-family: "Inter", sans-serif; }
+  .section-note { color: var(--muted); font-size: .88em; margin: 0 0 1em; }
+  .tablewrap {
+    overflow-x: auto; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;
+    background: var(--accent-soft);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .92em; }
   th {
-    text-align: left; font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
-    text-transform: uppercase; color: var(--muted); font-weight: 500;
-    padding: .65rem .85rem; border-bottom: 1px solid var(--line);
+    text-align: left; font-size: .68rem; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; padding: .65rem .85rem; border-bottom: 1px solid var(--line);
+    font-family: "Inter", sans-serif;
   }
   td { padding: .7rem .85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
   tr:last-child td { border-bottom: none; }
-  td.conf { font-weight: 600; min-width: 13rem; }
-  td.conf .org { display: block; font-weight: 400; color: var(--muted); font-size: .8rem; margin-top: .1rem; }
+  td.conf { font-weight: 600; color: var(--ink); min-width: 13rem; }
+  td.conf a { color: var(--ink); }
+  td.conf .org { display: block; font-weight: 400; color: var(--muted); font-size: .82em; margin-top: .1em; }
   td.when { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 9rem; }
-  td.when .place { display: block; font-size: .82rem; }
+  td.when .place { display: block; font-size: .85em; }
   .pill {
-    display: inline-block; font-family: var(--mono); font-size: .72rem; font-weight: 600;
-    padding: .18rem .55rem; border-radius: 999px; white-space: nowrap;
-    font-variant-numeric: tabular-nums;
+    display: inline-block; font-size: .72rem; font-weight: 700; font-family: "Inter", sans-serif;
+    padding: .18rem .6rem; border-radius: 999px; white-space: nowrap; font-variant-numeric: tabular-nums;
   }
   .pill.open { background: var(--open-soft); color: var(--open); }
   .pill.soon { background: var(--soon-soft); color: var(--soon); }
   .pill.closed { background: var(--closed-soft); color: var(--closed); }
-  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-  .deadline { font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .loop { background: var(--accent-soft); border-radius: 6px; padding: 1.1rem 1.3rem; }
-  .loop h2 { margin-bottom: .5rem; }
-  .loop ul { margin: 0; padding-left: 1.1rem; font-size: .9rem; }
-  .loop li { margin-bottom: .3rem; }
-  footer {
-    border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem;
-    color: var(--muted); font-size: .82rem; max-width: 70ch;
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .loop {
+    border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: 1em 1.3em; margin-top: 2em;
   }
+  .loop h2 { border-bottom: none; margin: 0; font-size: 1.2em; }
+  .loop ul { margin: .4em 0 0; padding-left: 1.1em; font-size: .92em; }
+  .loop li { margin-bottom: .3em; }
+  footer { border-top: 1px solid var(--line); margin-top: 2.5em; padding-top: 1em; color: var(--muted); font-size: .85em; max-width: 75ch; }
 </style>
 <script data-goatcounter="https://yuvallidany.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-<div class="wrap">
-  <header class="masthead">
-    <p class="eyebrow"><a href="/" style="text-decoration:none;">&larr; yuvallidany.github.io</a> &nbsp;·&nbsp; Community resource · updated August 6, 2026</p>
-    <h1>IO &amp; Digital Economics<br>Conferences &amp; Calls for Papers, 2026–27</h1>
-    <p class="standfirst">One page for planning your submission pipeline: industrial organization, digital economics, platforms, economics of AI, antitrust, and quantitative marketing. Deadlines checked against official conference pages where available — <strong>always verify before submitting</strong>. Spotted an error or a missing venue? Tell me and I'll update it.</p>
-  </header>
 
-  <section>
-    <h2>Open now — submit before it's too late <span class="count">5 calls</span></h2>
-    <p class="section-note">Calls for papers currently open, ordered by deadline. Expired calls are removed as their deadlines pass.</p>
-    <div class="tablewrap">
+<div class="masthead">
+  <div class="masthead-inner">
+    <a class="site-title" href="/">Yuval Lidany</a>
+    <nav class="nav-links"><a href="/research/">Research</a><a href="/contact/">Contact</a><a href="/cv/">CV</a></nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle day/night mode" title="Toggle day/night mode">
+      <span class="track">
+        <svg class="sw-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="currentColor" stroke="none"/><line x1="12" y1="1.5" x2="12" y2="3.8"/><line x1="12" y1="20.2" x2="12" y2="22.5"/><line x1="4.6" y1="4.6" x2="6.2" y2="6.2"/><line x1="17.8" y1="17.8" x2="19.4" y2="19.4"/><line x1="1.5" y1="12" x2="3.8" y2="12"/><line x1="20.2" y1="12" x2="22.5" y2="12"/><line x1="4.6" y1="19.4" x2="6.2" y2="17.8"/><line x1="17.8" y1="6.2" x2="19.4" y2="4.6"/></svg>
+        <svg class="sw-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <span class="knob"></span>
+      </span>
+    </button>
+  </div>
+</div>
+
+<div class="wrap">
+  <h1>Conferences &amp; Calls for Papers, 2026&ndash;27</h1>
+  <p class="standfirst">IO, digital economics, platforms, economics of AI, antitrust, and quantitative marketing. Deadlines checked against official conference pages &mdash; always verify before submitting. Updated August 6, 2026.</p>
+
+  <h2>Open now <span class="count">5 calls</span></h2>
+  <p class="section-note">Calls for papers currently open, ordered by deadline. Expired calls are removed as their deadlines pass.</p>
+  <div class="tablewrap">
       <table>
         <tr><th>Conference</th><th>Dates · Location</th><th>Deadline</th><th>Link</th></tr>
         <tr>
@@ -173,12 +180,10 @@ permalink: /cfp/
         </tr>
       </table>
     </div>
-  </section>
 
-  <section>
-    <h2>On the horizon — calls expected within the cycle <span class="count">18 venues</span></h2>
-    <p class="section-note">Timing estimated from the previous cycle where noted (~); watch the official page for the call to open.</p>
-    <div class="tablewrap">
+  <h2>On the horizon <span class="count">18 venues</span></h2>
+  <p class="section-note">Timing estimated from the previous cycle where noted (~); watch the official page for the call to open.</p>
+  <div class="tablewrap">
       <table>
         <tr><th>Conference</th><th>Expected dates · Location</th><th>Typical CFP timing</th><th>Link</th></tr>
         <tr>
@@ -291,11 +296,9 @@ permalink: /cfp/
         </tr>
       </table>
     </div>
-  </section>
 
-  <section>
-    <h2>Coming up — CFP closed, worth attending <span class="count">5 events</span></h2>
-    <div class="tablewrap">
+  <h2>Coming up &mdash; CFP closed, worth attending <span class="count">5 events</span></h2>
+  <div class="tablewrap">
       <table>
         <tr><th>Conference</th><th>Dates · Location</th><th>Notes</th></tr>
         <tr>
@@ -325,9 +328,8 @@ permalink: /cfp/
         </tr>
       </table>
     </div>
-  </section>
 
-  <section class="loop">
+  <div class="loop">
     <h2>Staying in the loop</h2>
     <ul>
       <li><a href="https://www.indorgsociety.org/">IOS Listserv</a> — all IIOC announcements</li>
@@ -336,11 +338,21 @@ permalink: /cfp/
       <li><a href="https://www.zew.de/en">ZEW</a> &amp; <a href="https://www.macci-mannheim.eu/">MaCCI</a> newsletters — EARIE, ICT, MaCCI calls</li>
       <li><a href="https://www.ifo.de/en/cesifo/calls-papers">CESifo calls for papers</a> — digitization, AI-impacts, and area-conference workshops</li>
     </ul>
-  </section>
+  </div>
 
-  <footer>
-    Compiled from official conference websites; last updated August 6, 2026 (expired calls removed as deadlines pass). Estimated timings are inferred from the previous cycle and marked with "~" or "est."; never treated as confirmed. This list is a community resource maintained by <a href="/">Yuval Lidany</a> — corrections and additions are very welcome (<a href="mailto:ylidany@hbs.edu">email me</a>).
-  </footer>
+  <footer>Compiled from official conference websites; last updated August 6, 2026 (expired calls removed as deadlines pass). Estimated timings are inferred from the previous cycle and marked with "~" or "est."; never treated as confirmed. This list is a community resource maintained by <a href="/">Yuval Lidany</a> &mdash; corrections and additions are very welcome (<a href="mailto:ylidany@hbs.edu">email me</a>).</footer>
 </div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+</script>
 </body>
 </html>
