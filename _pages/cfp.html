@@ -38,17 +38,19 @@ permalink: /cfp/
     --closed: #939ba6; --closed-soft: #2a2f37;
   }
   * { box-sizing: border-box; }
+  html { font-size: 16px; }
+  @media (min-width: 500px) { html { font-size: 18px; } }
   body {
     margin: 0; background: var(--bg); color: var(--text);
     font-family: "Inter", -apple-system, "Segoe UI", Arial, sans-serif;
-    font-size: 15px; line-height: 1.6;
+    font-size: 1em; line-height: 1.65;
     transition: background-color .2s ease, color .2s ease;
     -webkit-font-smoothing: antialiased;
   }
   .masthead { border-bottom: 1px solid var(--line); }
   .masthead-inner {
-    max-width: 1150px; margin: 0 auto; padding: 0 1em; display: flex; align-items: center;
-    min-height: 56px; position: relative;
+    max-width: 1800px; margin: 0 auto; padding: 1em; display: flex; align-items: center;
+    position: relative;
   }
   .site-title { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.15em; color: var(--ink); text-decoration: none; margin-right: 1.6em; }
   .nav-links { display: flex; gap: 1.8rem; }
@@ -75,9 +77,9 @@ permalink: /cfp/
   .wrap { max-width: 1150px; margin: 0 auto; padding: 2em 1em 3em; }
   h1 {
     font-family: "Source Serif 4", Georgia, "Times New Roman", serif; letter-spacing: -.005em;
-    color: var(--ink); font-size: 1.9em; margin: 0 0 .3em; line-height: 1.2;
+    color: var(--ink); font-size: 1.563em; margin: 0 0 .3em; line-height: 1.2;
   }
-  .standfirst { color: var(--muted); max-width: 68ch; margin: 0 0 1.6em; font-size: .95em; }
+  .standfirst { color: var(--muted); max-width: 68ch; margin: 0 0 1.6em; font-size: .9em; }
   h2 {
     font-family: "Source Serif 4", Georgia, serif; font-size: 1.45em; font-weight: 700; color: var(--ink);
     margin: 1.9em 0 .5em; padding-bottom: .2em; border-bottom: 2px solid var(--h2-rule);
