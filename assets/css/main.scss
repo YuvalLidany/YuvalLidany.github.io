@@ -434,18 +434,6 @@ body,
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-/* during page swaps only the content column animates — top bar, sidebar, and
-   footer are pinned as static regions so Safari's crossfade can't dim them */
-.masthead { view-transition-name: site-masthead; }
-.page__footer { view-transition-name: site-footer; }
-#main .sidebar { view-transition-name: site-sidebar; }
-#main .page, #main .archive { view-transition-name: site-content; }
-::view-transition-group(site-masthead),
-::view-transition-group(site-sidebar),
-::view-transition-group(site-footer) { animation: none; }
-::view-transition-old(root),
-::view-transition-new(root) { animation: none; }
-
 /* kill the theme's "intro" fade: it blanks the content for ~0.35s on every
    page view, which reads as a blink on each navigation */
 #main,

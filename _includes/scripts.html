@@ -53,12 +53,7 @@
               if (t) t.scrollIntoView();
             }
           };
-          // native view transition: old and new frames genuinely overlap — no blank gap
-          if (document.startViewTransition) {
-            document.startViewTransition(apply);
-          } else {
-            apply();
-          }
+          apply();
           if (window.__swapOK) window.__swapOK();
           if (window.goatcounter && window.goatcounter.count) {
             window.goatcounter.count({ path: url.pathname });
