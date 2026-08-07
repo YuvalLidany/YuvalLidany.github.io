@@ -324,6 +324,104 @@ a.pub__title:hover { color: #1f5c93 !important; text-decoration: underline; }
 
 
 /* ==========================================================================
+   CFP tracker page (/cfp/)
+   ========================================================================== */
+
+.cfp-standfirst { color: #5f6258; max-width: 68ch; font-size: 0.95em; }
+.cfp-count { font-size: 0.6em; color: #5f6258; font-weight: 400; font-family: "Inter", sans-serif; }
+.cfp-note { color: #5f6258; font-size: 0.9em; }
+.cfp-tablewrap {
+  overflow-x: auto;
+  border-left: 3px solid #1f5c93;
+  border-radius: 0 8px 8px 0;
+  background: rgba(31, 92, 147, 0.055);
+  margin-bottom: 1.6em;
+}
+.cfp-tablewrap table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+  font-size: 0.85em;
+  margin: 0;
+}
+.cfp-tablewrap th {
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 0.72em;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #5f6258;
+  font-weight: 600;
+  padding: 0.65em 0.9em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  background: transparent;
+}
+.cfp-tablewrap td {
+  padding: 0.7em 0.9em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  vertical-align: top;
+}
+.cfp-tablewrap tr:last-child td { border-bottom: none; }
+.cfp-tablewrap td.conf { font-weight: 600; color: #201f1c; min-width: 13em; }
+.cfp-tablewrap td.conf a { color: #201f1c; }
+.cfp-tablewrap td.conf .org { display: block; font-weight: 400; color: #5f6258; font-size: 0.85em; margin-top: 0.1em; }
+.cfp-tablewrap td.when { color: #5f6258; font-variant-numeric: tabular-nums; min-width: 9em; }
+.cfp-tablewrap td.when .place { display: block; font-size: 0.88em; }
+.pill {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.72em;
+  font-weight: 700;
+  padding: 0.18em 0.6em;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.pill.open { background: #e3f1e9; color: #1e7b4f; }
+.pill.soon { background: #f6ecdb; color: #9a5b0f; }
+.pill.closed { background: #ebedef; color: #6a7280; }
+.cfp-loop {
+  border-left: 3px solid #1f5c93;
+  background: rgba(31, 92, 147, 0.055);
+  border-radius: 0 8px 8px 0;
+  padding: 1em 1.3em;
+  margin-top: 2em;
+}
+.cfp-loop ul { margin: 0.4em 0 0; padding-left: 1.1em; font-size: 0.92em; }
+.cfp-loop li { margin-bottom: 0.3em; }
+.cfp-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+  margin-top: 2.5em;
+  padding-top: 1em;
+  color: #5f6258;
+  font-size: 0.85em;
+  max-width: 75ch;
+}
+
+html[data-theme="dark"] .cfp-standfirst,
+html[data-theme="dark"] .cfp-count,
+html[data-theme="dark"] .cfp-note { color: #96988f; }
+html[data-theme="dark"] .cfp-tablewrap {
+  border-left-color: #5d94c9;
+  background: rgba(125, 178, 228, 0.07);
+}
+html[data-theme="dark"] .cfp-tablewrap th { color: #96988f; border-bottom-color: rgba(255, 255, 255, 0.1); }
+html[data-theme="dark"] .cfp-tablewrap td { border-bottom-color: rgba(255, 255, 255, 0.1); }
+html[data-theme="dark"] .cfp-tablewrap td.conf,
+html[data-theme="dark"] .cfp-tablewrap td.conf a { color: #ece9e2; }
+html[data-theme="dark"] .cfp-tablewrap td.conf .org,
+html[data-theme="dark"] .cfp-tablewrap td.when { color: #96988f; }
+html[data-theme="dark"] .pill.open { background: #1f3529; color: #6cc296; }
+html[data-theme="dark"] .pill.soon { background: #3a2f1c; color: #ddab5f; }
+html[data-theme="dark"] .pill.closed { background: #2a2f37; color: #939ba6; }
+html[data-theme="dark"] .cfp-loop {
+  border-left-color: #5d94c9;
+  background: rgba(125, 178, 228, 0.07);
+}
+html[data-theme="dark"] .cfp-footer { border-top-color: rgba(255, 255, 255, 0.1); color: #96988f; }
+
+
+/* ==========================================================================
    Day / night mode
    ========================================================================== */
 
