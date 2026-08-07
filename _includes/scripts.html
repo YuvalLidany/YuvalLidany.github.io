@@ -2,3 +2,98 @@
 
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
+
+<!-- Blink-free navigation: fetch internal pages and swap #main in place instead of full reloads -->
+<script>
+  (function () {
+    var swappable = function (url) {
+      if (url.origin !== location.origin) return false;
+      if (/\.(pdf|png|jpe?g|svg|zip|bib)$/i.test(url.pathname)) return false;
+      if (url.pathname.indexOf('/cv') === 0) return false; // PDF viewer needs a full load
+      return true;
+    };
+
+    // warm the cache on hover so the swap is instant
+    document.addEventListener('mouseover', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || a.__warmed) return;
+      var url; try { url = new URL(a.href, location.href); } catch (err) { return; }
+      if (!swappable(url) || url.pathname === location.pathname) return;
+      a.__warmed = true;
+      fetch(url.href, { credentials: 'same-origin' }).catch(function () {});
+    });
+
+    document.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || a.target === '_blank' || a.hasAttribute('download')) return;
+      var url; try { url = new URL(a.href, location.href); } catch (err) { return; }
+      if (!swappable(url)) return;
+      if (url.pathname === location.pathname) {
+        if (url.hash) return;           // same-page anchor: let the browser scroll
+        e.preventDefault();             // same page again: just scroll to top
+        window.scrollTo({ top: 0 });
+        return;
+      }
+      e.preventDefault();
+      var curMain = document.getElementById('main');
+      fetch(url.href, { credentials: 'same-origin' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(function (html) {
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var newMain = doc.getElementById('main');
+          if (!newMain || !curMain.parentNode) { location.href = url.href; return; }
+          var apply = function () {
+            document.title = doc.title;
+            curMain.replaceWith(newMain);
+            history.pushState({}, '', url.href);
+            window.scrollTo(0, 0);
+            if (url.hash) {
+              var t = document.getElementById(url.hash.slice(1));
+              if (t) t.scrollIntoView();
+            }
+          };
+          // native view transition: old and new frames genuinely overlap — no blank gap
+          if (document.startViewTransition) {
+            document.startViewTransition(apply);
+          } else {
+            apply();
+          }
+          if (window.__swapOK) window.__swapOK();
+          if (window.goatcounter && window.goatcounter.count) {
+            window.goatcounter.count({ path: url.pathname });
+          }
+        })
+        .catch(function () { if (window.__swapFB) window.__swapFB(); location.href = url.href; });
+      // if reduced motion is preferred, skip straight to the swap
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        leaving.style.transition = 'none';
+        leaving.style.opacity = '1';
+        leaving.style.transform = 'none';
+      }
+    });
+
+    window.addEventListener('popstate', function () { location.reload(); });
+
+    {% if site.local_preview %}
+    /* local-preview badge: shows whether clicks swap in place or fall back to full reloads */
+    document.addEventListener('DOMContentLoaded', function () {
+      var b = document.createElement('div');
+      b.id = 'swap-badge';
+      b.style.cssText = 'position:fixed;bottom:12px;right:12px;z-index:9999;font:12px monospace;padding:6px 10px;border-radius:6px;background:#333;color:#fff;opacity:.92';
+      var fb = null;
+      try { fb = sessionStorage.getItem('swap-fallback'); sessionStorage.removeItem('swap-fallback'); } catch (e) {}
+      b.textContent = fb ? '\u26a0 last click = FULL RELOAD' : 'PREVIEW \u00b7 blink-free nav ON';
+      if (fb) b.style.background = '#a33';
+      document.body.appendChild(b);
+    });
+    window.__swapOK = function () {
+      var b = document.getElementById('swap-badge');
+      if (b) { b.textContent = '\u2713 swapped \u2014 no reload'; b.style.background = '#1e7b4f'; }
+    };
+    window.__swapFB = function () {
+      try { sessionStorage.setItem('swap-fallback', '1'); } catch (e) {}
+    };
+    {% endif %}
+  })();
+</script>

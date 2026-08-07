@@ -434,6 +434,21 @@ body,
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
+/* kill the theme's "intro" fade: it blanks the content for ~0.35s on every
+   page view, which reads as a blink on each navigation */
+#main,
+.page__inner-wrap,
+.sidebar,
+.archive,
+.page__related {
+  animation: none !important;
+}
+
+/* hide the mobile hamburger at desktop widths to kill its load-time flicker */
+@media (min-width: 700px) {
+  .greedy-nav > button:not(.theme-toggle) { display: none !important; }
+}
+
 /* --- day/night switch in the top bar --- */
 .masthead__inner-wrap { position: relative; }
 .masthead .greedy-nav { margin-right: 4.5rem; }
