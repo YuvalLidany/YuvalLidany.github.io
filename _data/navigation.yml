@@ -3,9 +3,11 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Contact"
-    url: /contact/    
-
-  - title: "CV"              # ⟵ add this block
+  - title: "CV"
     url: /cv/
- 
+
+  - title: "CFP Tracker"
+    url: /cfp/
+
+  - title: "Contact"
+    url: /contact/
