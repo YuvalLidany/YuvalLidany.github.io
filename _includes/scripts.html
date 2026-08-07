@@ -68,7 +68,20 @@
       }
     });
 
-    window.addEventListener('popstate', function () { location.reload(); });
+    window.addEventListener('popstate', function () {
+      fetch(location.href, { credentials: 'same-origin' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(function (html) {
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var newMain = doc.getElementById('main');
+          var curMain = document.getElementById('main');
+          if (!newMain || !curMain) { location.reload(); return; }
+          document.title = doc.title;
+          curMain.replaceWith(newMain);
+          window.scrollTo(0, 0);
+        })
+        .catch(function () { location.reload(); });
+    });
 
     {% if site.local_preview %}
     /* local-preview badge: shows whether clicks swap in place or fall back to full reloads */

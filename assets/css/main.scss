@@ -434,14 +434,25 @@ body,
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-/* kill the theme's "intro" fade: it blanks the content for ~0.35s on every
-   page view, which reads as a blink on each navigation */
+/* kill the theme's "intro" fade everywhere: it blanks elements (including the
+   masthead!) on every page view, which reads as the header/content blinking */
+.masthead,
+.page__hero,
 #main,
 .page__inner-wrap,
 .sidebar,
 .archive,
 .page__related {
   animation: none !important;
+}
+/* belt and suspenders: redefine the keyframes as a no-op so nothing can ever fade in late */
+@keyframes intro {
+  from { opacity: 1; }
+  to { opacity: 1; }
+}
+@-webkit-keyframes intro {
+  from { opacity: 1; }
+  to { opacity: 1; }
 }
 
 /* hide the mobile hamburger at desktop widths to kill its load-time flicker */
