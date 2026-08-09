@@ -77,4 +77,18 @@ DESCRIPTION:CFP deadline approaching
 TRIGGER:-P7D
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:nberlabor2027-deadline@yuvallidany.github.io
+DTSTAMP:20260809T000000Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270114
+SUMMARY:DEADLINE: NBER Market Power in the Labor Market
+DESCRIPTION:NBER conference (May 14 2027, Cambridge MA) — submission deadline\nhttps://www.nber.org/calls-papers-and-proposals/measuring-and-modeling-market-power-labor-market
+URL:https://www.nber.org/calls-papers-and-proposals/measuring-and-modeling-market-power-labor-market
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
 END:VCALENDAR
