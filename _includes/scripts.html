@@ -8,7 +8,7 @@
   (function () {
     var swappable = function (url) {
       if (url.origin !== location.origin) return false;
-      if (/\.(pdf|png|jpe?g|svg|zip|bib)$/i.test(url.pathname)) return false;
+      if (/\.(pdf|png|jpe?g|svg|zip|bib|ics)$/i.test(url.pathname)) return false;
       if (url.pathname.indexOf('/cv') === 0) return false; // PDF viewer needs a full load
       return true;
     };
@@ -66,6 +66,17 @@
         leaving.style.opacity = '1';
         leaving.style.transform = 'none';
       }
+    });
+
+    // private analytics: count calendar subscribe/download clicks as GoatCounter events
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('.cfp-cal a');
+      if (!a || !window.goatcounter || !window.goatcounter.count) return;
+      var href = a.getAttribute('href') || '';
+      var name = href.indexOf('webcal') === 0 ? 'cfp-subscribe-apple'
+               : href.indexOf('calendar.google') !== -1 ? 'cfp-subscribe-google'
+               : 'cfp-download-ics';
+      window.goatcounter.count({ path: name, title: 'CFP calendar: ' + name, event: true });
     });
 
     window.addEventListener('popstate', function () {
