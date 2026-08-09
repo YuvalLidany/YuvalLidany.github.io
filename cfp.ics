@@ -3,8 +3,8 @@ VERSION:2.0
 PRODID:-//yuvallidany.github.io//CFP Tracker//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:IO & Digital Econ — CFPs & Conferences
-X-WR-CALDESC:Deadlines and conference dates from yuvallidany.github.io/cfp/
+X-WR-CALNAME:IO & Digital Econ — CFP Deadlines
+X-WR-CALDESC:Submission deadlines from yuvallidany.github.io/cfp/
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
@@ -76,86 +76,5 @@ ACTION:DISPLAY
 DESCRIPTION:CFP deadline approaching
 TRIGGER:-P7D
 END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:earie2026c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260826
-DTEND;VALUE=DATE:20260829
-SUMMARY:EARIE 2026 (Mannheim)
-DESCRIPTION:https://earie.org/intro-earie-2026/
-URL:https://earie.org/intro-earie-2026/
-END:VEVENT
-BEGIN:VEVENT
-UID:qme2026c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260827
-DTEND;VALUE=DATE:20260829
-SUMMARY:QME 2026 (St. Louis)
-DESCRIPTION:https://www.chicagobooth.edu/research/kilts/events/qme-conference/annual-conference
-URL:https://www.chicagobooth.edu/research/kilts/events/qme-conference/annual-conference
-END:VEVENT
-BEGIN:VEVENT
-UID:nw2026c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260918
-DTEND;VALUE=DATE:20260920
-SUMMARY:Northwestern Antitrust Conference (Chicago)
-DESCRIPTION:https://www.law.northwestern.edu/research-faculty/clbe/events/antitrust/
-URL:https://www.law.northwestern.edu/research-faculty/clbe/events/antitrust/
-END:VEVENT
-BEGIN:VEVENT
-UID:nberai2026c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20260923
-DTEND;VALUE=DATE:20260925
-SUMMARY:NBER Economics of AI (Toronto)
-DESCRIPTION:https://www.nber.org/conferences/economics-artificial-intelligence-fall-2026
-URL:https://www.nber.org/conferences/economics-artificial-intelligence-fall-2026
-END:VEVENT
-BEGIN:VEVENT
-UID:codemit2026c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20261115
-SUMMARY:CODE@MIT 2026 (Cambridge, MA)
-DESCRIPTION:https://ide.mit.edu/events/2026-conference-on-digital-experimentation-mit-codemit/
-URL:https://ide.mit.edu/events/2026-conference-on-digital-experimentation-mit-codemit/
-END:VEVENT
-BEGIN:VEVENT
-UID:nberpf2026c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20261205
-DTEND;VALUE=DATE:20261206
-SUMMARY:NBER Production Function Estimation (Cambridge, MA)
-DESCRIPTION:https://www.nber.org/calls-papers-and-proposals/production-function-estimation-and-its-applications-industries
-URL:https://www.nber.org/calls-papers-and-proposals/production-function-estimation-and-its-applications-industries
-END:VEVENT
-BEGIN:VEVENT
-UID:wise2026c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20261216
-DTEND;VALUE=DATE:20261219
-SUMMARY:WISE 2026 (Lisbon)
-DESCRIPTION:https://wiseconf2026.github.io/
-URL:https://wiseconf2026.github.io/
-END:VEVENT
-BEGIN:VEVENT
-UID:assa2027c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20270103
-DTEND;VALUE=DATE:20270106
-SUMMARY:ASSA 2027 (Washington, DC)
-DESCRIPTION:https://www.aeaweb.org/conference/
-URL:https://www.aeaweb.org/conference/
-END:VEVENT
-BEGIN:VEVENT
-UID:tse2027c@yuvallidany.github.io
-DTSTAMP:20260809T000000Z
-DTSTART;VALUE=DATE:20270107
-DTEND;VALUE=DATE:20270109
-SUMMARY:TSE 19th Digital Economics Conference (Toulouse)
-DESCRIPTION:https://www.tse-fr.eu/conferences/2027-19th-digital-economics-conference
-URL:https://www.tse-fr.eu/conferences/2027-19th-digital-economics-conference
 END:VEVENT
 END:VCALENDAR
