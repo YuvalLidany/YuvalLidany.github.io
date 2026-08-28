@@ -345,6 +345,19 @@ a.pub__title:hover { color: #1f5c93 !important; text-decoration: underline; }
    CFP tracker page (/cfp/)
    ========================================================================== */
 
+/* the CFP page has no sidebar: center its content instead of the
+   archive layout's float-right-with-left-gap (scoped via :has) */
+@media (min-width: 1200px) {
+  #main:has(.cfp-standfirst) .archive {
+    float: none !important;
+    width: 83% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 .cfp-standfirst { color: #5f6258; max-width: 68ch; font-size: 0.95em; }
 .cfp-count { font-size: 0.6em; color: #5f6258; font-weight: 400; font-family: "Inter", sans-serif; }
 .cfp-note { color: #5f6258; font-size: 0.9em; }
