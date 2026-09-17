@@ -8,8 +8,22 @@ X-WR-CALDESC:Submission deadlines from yuvallidany.github.io/cfp/
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
+UID:nberdigitalai2027-deadline@yuvallidany.github.io
+DTSTAMP:20260917T160557Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:DEADLINE: NBER Digital Economics and AI Meeting (Spring 2027)
+DESCRIPTION:NBER conference (Spring 2027, Stanford CA typical) — submission deadline\nhttps://www.nber.org/conferences/digital-economics-and-ai-meeting-spring-2027
+URL:https://www.nber.org/conferences/digital-economics-and-ai-meeting-spring-2027
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:nberlabor2027-deadline@yuvallidany.github.io
-DTSTAMP:20260917T160335Z
+DTSTAMP:20260917T160557Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
 SUMMARY:DEADLINE: NBER Market Power in the Labor Market
