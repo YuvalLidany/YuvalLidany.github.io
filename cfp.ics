@@ -8,8 +8,22 @@ X-WR-CALDESC:Submission deadlines from yuvallidany.github.io/cfp/
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
+UID:dcc2027-deadline@yuvallidany.github.io
+DTSTAMP:20260921T131457Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:DEADLINE: Digital Competition Conference 2027 (DCC '27)
+DESCRIPTION:KGI / Yale Tobin Center / Princeton CITP conference (Feb 9–10 2027, Washington DC) — submission deadline\nhttps://kgi.georgetown.edu/news/call-for-submissions-digital-competition-conference-2027/
+URL:https://kgi.georgetown.edu/news/call-for-submissions-digital-competition-conference-2027/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:nberdigitalai2027-deadline@yuvallidany.github.io
-DTSTAMP:20260917T160557Z
+DTSTAMP:20260921T131457Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
 SUMMARY:DEADLINE: NBER Digital Economics and AI Meeting (Spring 2027)
@@ -23,7 +37,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:nberlabor2027-deadline@yuvallidany.github.io
-DTSTAMP:20260917T160557Z
+DTSTAMP:20260921T131457Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
 SUMMARY:DEADLINE: NBER Market Power in the Labor Market
