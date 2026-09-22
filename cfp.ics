@@ -49,4 +49,18 @@ DESCRIPTION:CFP deadline approaching
 TRIGGER:-P7D
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:cepr-jie27-deadline@yuvallidany.github.io
+DTSTAMP:20260922T203716Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:DEADLINE: 27th CEPR-JIE Conference on Applied Industrial Organization
+DESCRIPTION:CEPR / Journal of Industrial Economics conference (May 27–28 2027, Tilburg, Netherlands) — submission deadline\nhttps://cepr.org/events/event-series/cepr-annual-applied-industrial-organisation-conference/27th-cepr-jie-conference
+URL:https://cepr.org/events/event-series/cepr-annual-applied-industrial-organisation-conference/27th-cepr-jie-conference
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
 END:VCALENDAR
