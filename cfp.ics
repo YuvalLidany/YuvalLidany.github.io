@@ -63,4 +63,32 @@ DESCRIPTION:CFP deadline approaching
 TRIGGER:-P7D
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:stigler2027-deadline@yuvallidany.github.io
+DTSTAMP:20260922T205815Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:DEADLINE: Stigler Center Annual Conference 2027
+DESCRIPTION:"Will AI Kill Markets (and Democracy)?" — Stigler Center\, Chicago Booth (Apr 15–16 2027\, Chicago\, IL) — submission deadline (full papers or extended abstracts up to 3\,000 words)\nhttps://www.chicagobooth.edu/research/stigler/events/2027-annual-conference
+URL:https://www.chicagobooth.edu/research/stigler/events/2027-annual-conference
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:wopa2027-deadline@yuvallidany.github.io
+DTSTAMP:20260922T205815Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:DEADLINE: WoPA 2027 (Workshop on Platform Analytics)
+DESCRIPTION:Rady School of Management\, UC San Diego (Apr 2–3 2027\, San Diego\, CA) — submission deadline\nhttps://platformanalytics.org/
+URL:https://platformanalytics.org/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
 END:VCALENDAR
