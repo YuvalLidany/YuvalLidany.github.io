@@ -91,4 +91,18 @@ DESCRIPTION:CFP deadline approaching
 TRIGGER:-P7D
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:cresse2027-deadline@yuvallidany.github.io
+DTSTAMP:20260923T152618Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:DEADLINE: CRESSE 2027 (21st)
+DESCRIPTION:Competition & Regulation Summer School and Conference (Jul 2–4 2027\, Minoa Palace Resort\, Chania\, Crete\, Greece) — submission deadline\nhttps://www.cresse.info/call-for-papers/
+URL:https://www.cresse.info/call-for-papers/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
 END:VCALENDAR
