@@ -8,6 +8,20 @@ X-WR-CALDESC:Submission deadlines from yuvallidany.github.io/cfp/
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
+UID:eulen2027-deadline@yuvallidany.github.io
+DTSTAMP:20261001T130900Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:DEADLINE: 3rd EULEN Conference (EU Law Enforcement)
+DESCRIPTION:"Enforcing the Rules of the Game: Competition\, Regulation\, and the Evolving Architecture of EU Law Enforcement" — University of Warsaw / Polish Academy of Sciences / IE University / Utrecht University (May 10–11 2027\, Warsaw\, Poland) — submission deadline\nhttps://jmn-eulen.nl/call-for-papers-competition-law/
+URL:https://jmn-eulen.nl/call-for-papers-competition-law/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:nberdigitalai2027-deadline@yuvallidany.github.io
 DTSTAMP:20260921T131457Z
 DTSTART;VALUE=DATE:20261103
