@@ -8,20 +8,6 @@ X-WR-CALDESC:Submission deadlines from yuvallidany.github.io/cfp/
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
-UID:eulen2027-deadline@yuvallidany.github.io
-DTSTAMP:20261008T130936Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261016
-SUMMARY:DEADLINE: 3rd EULEN Conference (EU Law Enforcement)
-DESCRIPTION:"Enforcing the Rules of the Game: Competition\, Regulation\, and the Evolving Architecture of EU Law Enforcement" — University of Warsaw / Polish Academy of Sciences / IE University / Utrecht University (May 10–11 2027\, Warsaw\, Poland) — submission deadline\nhttps://jmn-eulen.nl/call-for-papers-competition-law/
-URL:https://jmn-eulen.nl/call-for-papers-competition-law/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:CFP deadline approaching
-TRIGGER:-P7D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:phdsi5-2027-deadline@yuvallidany.github.io
 DTSTAMP:20261005T132516Z
 DTSTART;VALUE=DATE:20261101
@@ -43,6 +29,20 @@ DTEND;VALUE=DATE:20261104
 SUMMARY:DEADLINE: NBER Digital Economics and AI Tutorial (Spring 2027)
 DESCRIPTION:NBER grad-student tutorial application — not a paper submission (Jan 20–21 2027\, SIEPR\, Stanford University\, Stanford\, CA)\; precedes the invitation-only Digital Economics and AI Meeting — application deadline\nhttps://www.nber.org/calls-papers-and-proposals/digital-economics-and-ai-tutorial
 URL:https://www.nber.org/calls-papers-and-proposals/digital-economics-and-ai-tutorial
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:macci2027-deadline@yuvallidany.github.io
+DTSTAMP:20261008T181200Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:DEADLINE: MaCCI Annual Conference 2027
+DESCRIPTION:ZEW Mannheim / University of Mannheim (Mar 11–12 2027\, Mannheim\, Germany) — submission deadline (200-word abstract by e-mail to MacciAnnual2027@zew.de)\nhttps://www.zew.de/en/events-and-professional-training/detail/macci-annual-conference-2027/4981
+URL:https://www.zew.de/en/events-and-professional-training/detail/macci-annual-conference-2027/4981
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:CFP deadline approaching
