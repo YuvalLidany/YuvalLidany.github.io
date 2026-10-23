@@ -92,6 +92,20 @@ TRIGGER:-P7D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:ftcmarketing2027-deadline@yuvallidany.github.io
+DTSTAMP:20261023T151522Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:DEADLINE: 4th FTC Conference on Marketing and Public Policy
+DESCRIPTION:FTC Bureau of Economics (Apr 29–30 2027\, 1400 16th Street NW\, Washington\, DC) — abstracts or completed papers (completed preferred) due to marketingconf@ftc.gov\nhttps://www.ftc.gov/news-events/events/2027/04/fourth-federal-trade-commission-conference-marketing-public-policy
+URL:https://www.ftc.gov/news-events/events/2027/04/fourth-federal-trade-commission-conference-marketing-public-policy
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:nberlabor2027-deadline@yuvallidany.github.io
 DTSTAMP:20260921T131457Z
 DTSTART;VALUE=DATE:20270113
