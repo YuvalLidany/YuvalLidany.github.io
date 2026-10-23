@@ -31,7 +31,7 @@ author_profile: true
 <div class="pubs__section-title" id="published">Published &amp; Forthcoming</div>
 
 <div class="pub">
-  <span class="pub__title">&ldquo;AI as a GPT: Implications for Competition&rdquo;</span>
+  <a class="pub__title" href="https://YuvalLidany.github.io/files/Goldfarb_Lidany.pdf" target="_blank">&ldquo;AI as a GPT: Implications for Competition&rdquo;</a>
   <div class="pub__meta">with Avi Goldfarb &nbsp;&middot;&nbsp; <span class="pub__status">Forthcoming in <i>Antitrust Law Journal</i></span></div>
   <div class="pub__links">
     <a href="https://YuvalLidany.github.io/files/Goldfarb_Lidany.pdf" target="_blank">PDF</a>
