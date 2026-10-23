@@ -26,9 +26,9 @@ UID:nberdigitalai2027-deadline@yuvallidany.github.io
 DTSTAMP:20261008T130936Z
 DTSTART;VALUE=DATE:20261103
 DTEND;VALUE=DATE:20261104
-SUMMARY:DEADLINE: NBER Digital Economics and AI Tutorial (Spring 2027)
-DESCRIPTION:NBER grad-student tutorial application — not a paper submission (Jan 20–21 2027\, SIEPR\, Stanford University\, Stanford\, CA)\; precedes the invitation-only Digital Economics and AI Meeting — application deadline\nhttps://www.nber.org/calls-papers-and-proposals/digital-economics-and-ai-tutorial
-URL:https://www.nber.org/calls-papers-and-proposals/digital-economics-and-ai-tutorial
+SUMMARY:DEADLINE: NBER Digital Economics and AI Meeting (Spring 2027)
+DESCRIPTION:NBER conference — Goldfarb\, Reimers\, Simonov\, Tucker (Jan 21–22 2027\, SIEPR\, Stanford University\, Stanford\, CA) — paper submission deadline\; a parallel grad-student Tutorial applies by the same date\nhttps://www.nber.org/conferences/digital-economics-and-ai-meeting-spring-2027
+URL:https://www.nber.org/conferences/digital-economics-and-ai-meeting-spring-2027
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:CFP deadline approaching
