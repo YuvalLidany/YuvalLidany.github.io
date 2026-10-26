@@ -120,6 +120,20 @@ TRIGGER:-P7D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:res2027-deadline@yuvallidany.github.io
+DTSTAMP:20261026T174500Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270119
+SUMMARY:DEADLINE: RES 2027 Annual Conference (Royal Economic Society)
+DESCRIPTION:Royal Economic Society\, University of Reading (Jun 28–30 2027\, Reading\, UK) — General Session submission deadline (23.55 GMT)\; Speed & Poster Session deadline is Apr 12 2027\nhttps://res.org.uk/event-listing/res2027/
+URL:https://res.org.uk/event-listing/res2027/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:cresse2027-deadline@yuvallidany.github.io
 DTSTAMP:20260923T152618Z
 DTSTART;VALUE=DATE:20270201
