@@ -8,20 +8,6 @@ X-WR-CALDESC:Submission deadlines from yuvallidany.github.io/cfp/
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
-UID:phdsi5-2027-deadline@yuvallidany.github.io
-DTSTAMP:20261005T132516Z
-DTSTART;VALUE=DATE:20261101
-DTEND;VALUE=DATE:20261102
-SUMMARY:DEADLINE: PhDSI5 (5th PhD Summer Institute in Trade & IO)
-DESCRIPTION:UNSW Business School\, School of Economics (Mar 19 2027\, Sydney\, Australia) — submission deadline\nhttps://inomics.com/conference/5th-phd-summer-institute-in-international-trade-industrial-organisation-1555002
-URL:https://inomics.com/conference/5th-phd-summer-institute-in-international-trade-industrial-organisation-1555002
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:CFP deadline approaching
-TRIGGER:-P7D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:nberdigitalai2027-deadline@yuvallidany.github.io
 DTSTAMP:20261008T130936Z
 DTSTART;VALUE=DATE:20261103
