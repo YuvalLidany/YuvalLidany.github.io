@@ -8,20 +8,6 @@ X-WR-CALDESC:Submission deadlines from yuvallidany.github.io/cfp/
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
-UID:nberdigitalai2027-deadline@yuvallidany.github.io
-DTSTAMP:20261008T130936Z
-DTSTART;VALUE=DATE:20261103
-DTEND;VALUE=DATE:20261104
-SUMMARY:DEADLINE: NBER Digital Economics and AI Meeting (Spring 2027)
-DESCRIPTION:NBER conference — Goldfarb\, Reimers\, Simonov\, Tucker (Jan 21–22 2027\, SIEPR\, Stanford University\, Stanford\, CA) — paper submission deadline\; a parallel grad-student Tutorial applies by the same date\nhttps://www.nber.org/conferences/digital-economics-and-ai-meeting-spring-2027
-URL:https://www.nber.org/conferences/digital-economics-and-ai-meeting-spring-2027
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:CFP deadline approaching
-TRIGGER:-P7D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:macci2027-deadline@yuvallidany.github.io
 DTSTAMP:20261008T181200Z
 DTSTART;VALUE=DATE:20261115
@@ -85,6 +71,20 @@ DTEND;VALUE=DATE:20261212
 SUMMARY:DEADLINE: 4th FTC Conference on Marketing and Public Policy
 DESCRIPTION:FTC Bureau of Economics (Apr 29–30 2027\, 1400 16th Street NW\, Washington\, DC) — abstracts or completed papers (completed preferred) due to marketingconf@ftc.gov\nhttps://www.ftc.gov/news-events/events/2027/04/fourth-federal-trade-commission-conference-marketing-public-policy
 URL:https://www.ftc.gov/news-events/events/2027/04/fourth-federal-trade-commission-conference-marketing-public-policy
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:parisdigitaleconomics2027-deadline@yuvallidany.github.io
+DTSTAMP:20261104T160000Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:DEADLINE: Paris Conference on Digital Economics 2027
+DESCRIPTION:Télécom Paris\, Institut Polytechnique de Paris (Apr 22–23 2027\, Palaiseau\, France) — full papers due\; Innovation & Regulation Chair with HEC Paris\, contact digitaleconparis@gmail.com\nhttps://www.digitaleconomics-paris.fr/conference-2027
+URL:https://www.digitaleconomics-paris.fr/conference-2027
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:CFP deadline approaching
