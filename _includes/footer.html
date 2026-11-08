@@ -29,10 +29,14 @@
     padding: 10px 0; /* Adjust padding to reduce space */
 }
 .footer-envelope {
-    display: block;
-    font-size: 24px;
-    margin-bottom: 5px; /* Adjust the margin as needed */
+    display: inline;
+    font-size: 18px;
     color: inherit; /* Inherit the color from the rest of the page */
+    text-decoration: none;
+}
+.page__footer-copyright .sep {
+    padding: 0 0.4em;
+    opacity: 0.6;
 }
 .page__footer-copyright {
     margin: 0; /* Remove default margins */
@@ -43,9 +47,8 @@
 </style>
 
 <div class="footer-container">
-    <a href="mailto:{{ site.author.email }}" class="footer-envelope">&#9993;</a>
     <div class="page__footer-copyright">
-        &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
+        <a href="mailto:{{ site.author.email }}" class="footer-envelope" aria-label="Email">&#9993;</a><span class="sep">&middot;</span>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}<span class="sep">&middot;</span>Harvard Business School, Boston, MA<span class="sep">&middot;</span><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
     </div>
 </div>
 
