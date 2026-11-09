@@ -38,6 +38,9 @@
     padding: 0 0.4em;
     opacity: 0.6;
 }
+.page__footer-copyright .fitem {
+    white-space: nowrap; /* wrap between items, never inside one */
+}
 .page__footer-copyright {
     margin: 0; /* Remove default margins */
     padding: 5px 0; /* Reduce padding */
@@ -48,7 +51,7 @@
 
 <div class="footer-container">
     <div class="page__footer-copyright">
-        <a href="mailto:{{ site.author.email }}" class="footer-envelope" aria-label="Email">&#9993;</a><span class="sep">&middot;</span>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}<span class="sep">&middot;</span>Harvard Business School, Boston, MA<span class="sep">&middot;</span><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        <span class="fitem"><a href="mailto:{{ site.author.email }}" class="footer-envelope" aria-label="Email">&#9993;</a><span class="sep">&middot;</span>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}<span class="sep">&middot;</span></span><span class="fitem">Harvard Business School, Boston, MA<span class="sep">&middot;</span></span><span class="fitem"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
     </div>
 </div>
 
