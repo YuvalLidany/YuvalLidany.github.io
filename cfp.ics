@@ -133,4 +133,18 @@ DESCRIPTION:CFP deadline approaching
 TRIGGER:-P7D
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:criei2027-deadline@yuvallidany.github.io
+DTSTAMP:20261110T154951Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:DEADLINE: 3rd CRIEI Workshop on Competition and Regulation Economics
+DESCRIPTION:Competition and Regulation Industrial Economics Ireland\, UCD (Jun 1 2027\, University College Dublin\, Ireland) — submit full paper (preferred) or long abstract to criei.group@gmail.com\nhttps://www.criei.ie/workshops
+URL:https://www.criei.ie/workshops
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
 END:VCALENDAR
