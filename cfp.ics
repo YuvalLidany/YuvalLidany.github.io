@@ -147,4 +147,18 @@ DESCRIPTION:CFP deadline approaching
 TRIGGER:-P7D
 END:VALARM
 END:VEVENT
+BEGIN:VEVENT
+UID:iioc2027-deadline@yuvallidany.github.io
+DTSTAMP:20261112T024246Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270124
+SUMMARY:DEADLINE: IIOC 2027 (25th International Industrial Organization Conference)
+DESCRIPTION:Industrial Organization Society (Apr 30–May 2 2027\, Hilton Baltimore Inner Harbor\, Baltimore\, MD) — submit at editorialexpress.com/conference/IIOC2027\; no fee\, one submission per person\, acceptance conditional on serving as a discussant\; decisions late Feb 2027\, presenter registration by Mar 15 2027\nhttp://editorialexpress.com/conference/IIOC2027
+URL:http://editorialexpress.com/conference/IIOC2027
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CFP deadline approaching
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
 END:VCALENDAR
