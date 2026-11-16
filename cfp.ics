@@ -8,20 +8,6 @@ X-WR-CALDESC:Submission deadlines from yuvallidany.github.io/cfp/
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 X-PUBLISHED-TTL:P1D
 BEGIN:VEVENT
-UID:macci2027-deadline@yuvallidany.github.io
-DTSTAMP:20261008T181200Z
-DTSTART;VALUE=DATE:20261115
-DTEND;VALUE=DATE:20261116
-SUMMARY:DEADLINE: MaCCI Annual Conference 2027
-DESCRIPTION:ZEW Mannheim / University of Mannheim (Mar 11–12 2027\, Mannheim\, Germany) — submission deadline (200-word abstract by e-mail to MacciAnnual2027@zew.de)\nhttps://www.zew.de/en/events-and-professional-training/detail/macci-annual-conference-2027/4981
-URL:https://www.zew.de/en/events-and-professional-training/detail/macci-annual-conference-2027/4981
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:CFP deadline approaching
-TRIGGER:-P7D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:cepr-jie27-deadline@yuvallidany.github.io
 DTSTAMP:20260922T203716Z
 DTSTART;VALUE=DATE:20261122
